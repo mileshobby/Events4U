@@ -22,9 +22,17 @@ Events:
   POST /api/events
   GET /api/events
   GET /api/events/filtered
+    **Not Totally sure how to implement filtering API on back end***
+    **Possibly takes tag_names in query params? Maybe merge this end
+    point with normal api/events GET**
   GET /api/events/:id
   DELETE /api/events/:id
   PATCH /api/events/update/:id
+
+
+Category:
+  POST /api/categories
+  GET /api/categories
 
 Tickets:
   POST /api/tickets
