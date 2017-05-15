@@ -31,28 +31,22 @@ Design Docs:
 Implementation Timeline:
 
 * Phase 1: Backend setup and Front End User Authentication (2 days)
-
-Objective: Functioning rails project with front-end Authentication
+  * Objective: Functioning rails project with front-end Authentication
 
 * Phase 2: Tickets Model, API, and components (2 days)
-
-Objective: Events can be created, read, edited and destroyed through the API.
+  * Objective: Events can be created, read, edited and destroyed through the API.
 
 * Phase 3: Events (2 days)
-
-Objective: Tickets belong to Events that can be created, read, edited and destroyed through the API.
+  * Objective: Tickets belong to Events that can be created, read, edited and destroyed through the API.
 
 * Phase 4: Categories (1 day)
-
-Objective: Events can be tagged with categories, and categories are searchable.
+  * Objective: Events can be tagged with categories, and categories are searchable.
 
 * Phase 5: Bookmarking Events (1 day)
-
-Object: Users can bookmark events in order to add them to a saved list.
+  * Object: Users can bookmark events in order to add them to a saved list.
 
 * Phase 6: Purchasing Tickets (1 day)
-
-Objective: Users can purchase tickets to add them to saved list.
+  * Objective: Users can purchase tickets to add them to saved list.
 
 
 Bonus Features (TBD)

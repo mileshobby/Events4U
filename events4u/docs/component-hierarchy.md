@@ -56,10 +56,10 @@
 
 * Routes
 
-Path	Component
-"/sign-up"	"AuthFormContainer"
-"/sign-in"	"AuthFormContainer"
-"/home"	"HomeContainer"
-"/home/events/:eventId"	"EventShowContainer"
-"/search"	"Search"
-"/new-event"	"NewEventContainer"
+Path Component
+* "/sign-up"	"AuthFormContainer"
+* "/sign-in"	"AuthFormContainer"
+* "/home"	"HomeContainer"
+* "/home/events/:eventId"	"EventShowContainer"
+* "/search"	"Search"
+* "/new-event"	"NewEventContainer"
