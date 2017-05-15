@@ -16,13 +16,13 @@ smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 2. Registration / Tickets
 3. Categories
 4. Bookmark events
-Bonus: Google Maps integration
-Bonus: Search
-Bonus: Infinite Scroll
-Bonus: Ticket Quantity //Not sure if worth doing or not
+* Bonus: Google Maps integration
+* Bonus: Search
+* Bonus: Infinite Scroll
+* Bonus: Ticket Quantity //Not sure if worth doing or not
 
 Design Docs:
-*  [View Wireframes](./wireframes)
+* [View Wireframes](./wireframes)
 * [React Components](./component-hierarchy.md)
 * [API Endpoints](./api-endpoints.md)
 * [DB Schema](./schema.md)
