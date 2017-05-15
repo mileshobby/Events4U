@@ -29,7 +29,7 @@ class AuthForm extends React.Component{
     return (
       <div>
         <form>
-
+          <h1>Logged In: {String(this.props.loggedIn)}</h1>
           <h2>{this.header}</h2>
           <label>
             Username:
