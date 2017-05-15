@@ -1,4 +1,4 @@
-Events4U
+# Events4U
 
 Heroku Link:
 
@@ -33,19 +33,19 @@ Implementation Timeline:
 * Phase 1: Backend setup and Front End User Authentication (2 days)
   * Objective: Functioning rails project with front-end Authentication
 
-* Phase 2: Tickets Model, API, and components (2 days)
+* Phase 2: Tickets Model, API, and components (1.5 days)
   * Objective: Events can be created, read, edited and destroyed through the API.
 
-* Phase 3: Events (2 days)
+* Phase 3: Events (1.5 days)
   * Objective: Tickets belong to Events that can be created, read, edited and destroyed through the API.
 
-* Phase 4: Categories (1 day)
+* Phase 4: Categories (2 day)
   * Objective: Events can be tagged with categories, and categories are searchable.
 
-* Phase 5: Bookmarking Events (1 day)
+* Phase 5: Bookmarking Events (0.5 day)
   * Object: Users can bookmark events in order to add them to a saved list.
 
-* Phase 6: Purchasing Tickets (1 day)
+* Phase 6: Purchasing Tickets (0.5 day)
   * Objective: Users can purchase tickets to add them to saved list.
 
 

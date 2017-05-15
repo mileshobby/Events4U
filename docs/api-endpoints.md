@@ -27,7 +27,8 @@ Events:
     //point with normal api/events GET**
   GET /api/events/:id
   DELETE /api/events/:id
-  PATCH /api/events/update/:id
+  PATCH /api/events/:id
+  POST /api/events/:id/
 
 
 Category:
@@ -36,6 +37,9 @@ Category:
 
 Tickets:
   POST /api/tickets
-  GET /api/:eventId/tickets
-  PATCH /api/tickets/:id (if time permits)
-  DELETE /api/tickets (if time permits)
+  GET /api/:userId/tickets
+
+Bookmarks:
+  POST /api/bookmarks
+  GET /api/:userId/bookmarks
+  DELETE /api/:userId/bookmarks

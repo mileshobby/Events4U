@@ -2,6 +2,7 @@
 
 * AuthFormContainer
   * AuthForm
+  * Errors
 
 * HomeContainer
   * Home
@@ -25,9 +26,7 @@
   * NewEvent
       * TicketsCreator
         * Ticket
-
-* ErrorsContainer
-  * Errors
+      * Errors
 
 * EventShowContainer
   * EventShow
@@ -63,3 +62,4 @@ Path Component
 * "/home/events/:eventId"	"EventShowContainer"
 * "/search"	"Search"
 * "/new-event"	"NewEventContainer"
+* "/user/events"
