@@ -28,7 +28,7 @@ id              integer        not null, primary key
 type            string         not null
 price           integer        not null, indexed
 total_quantity  integer   
-quantity_left   integer        **only if I implement quantity**    
+quantity_left   integer        //only if I implement quantity**    
 
 
 TicketPurchases:

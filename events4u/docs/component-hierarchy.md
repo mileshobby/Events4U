@@ -1,60 +1,60 @@
-*Component Hierarchy
+* Component Hierarchy
 
-*AuthFormContainer
-  *AuthForm
+* AuthFormContainer
+  * AuthForm
 
-*HomeContainer
-  *Home
-    *SearchBoxContainer
-      *SearchBox
-    *EventsByCategoryContainer
-      *EventsByCategory
-        *EventsByCategoryItem
-    *CategorySelector
+* HomeContainer
+  * Home
+    * SearchBoxContainer
+      * SearchBox
+    * EventsByCategoryContainer
+      * EventsByCategory
+        *  EventsByCategoryItem
+    *  CategorySelector
 
-*NavBarContainer
-  *NavBar
-    *AccountDropdown
-    *SearchBar
+*  NavBarContainer
+  *  NavBar
+    *  AccountDropdown
+    *  SearchBar
 
-*Footer
+* Footer
 
-*SearchBar
+* SearchBar
 
-*NewEventContainer
-  *NewEvent
-      *TicketsCreator
-        *Ticket
+* NewEventContainer
+  * NewEvent
+      * TicketsCreator
+        * Ticket
 
-*ErrorsContainer
-  *Errors
+* ErrorsContainer
+  * Errors
 
-*EventShowContainer
-  *EventShow
-    *EventInformation
-    *EventDetails
+* EventShowContainer
+  * EventShow
+    * EventInformation
+    * EventDetails
 
-*CheckoutContainer
-  *Checkout
-    *TicketsList
-    *TicketsListItem
+* CheckoutContainer
+  * Checkout
+    * TicketsList
+    * TicketsListItem
 
-*GoogleMapContainer
-  *GoogleMap
+* GoogleMapContainer
+  * GoogleMap
 
-*SearchContainer
-  *Search
-    *FilterBox
-      *GoogleMap
-      *FilterBoxItem
-    *SearchResults
-      *SearchResultsItem
-    *SearchBar
+* SearchContainer
+  * Search
+    * FilterBox
+      * GoogleMap
+      * FilterBoxItem
+    * SearchResults
+      * SearchResultsItem
+    * SearchBar
 
-*SearchItemContainer
-  *SearchItem
+* SearchItemContainer
+  * SearchItem
 
-*Routes
+* Routes
 
 Path	Component
 "/sign-up"	"AuthFormContainer"
