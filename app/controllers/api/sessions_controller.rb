@@ -6,16 +6,17 @@ class Api::SessionsController < ApplicationController
       log_in(@user)
       render json: @user #MAYBE CHANGE THIS TO A PARTIAL
     else
-      render json: @user.errors.full_messages, status: 400
+      render json: ["Invalid Login Credentials"], status: 400
     end
   end
 
   def destroy
     if logged_in?
       log_out
+      render json: {}
     else
-      render json: ["Cannot log out without being signed in."], status: 400
+      render json: ["Cannot log out without being signed in."], status: 404
     end
   end
-  
+
 end
