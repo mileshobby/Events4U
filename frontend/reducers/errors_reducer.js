@@ -1,15 +1,12 @@
-import { RECEIVE_AUTH_ERRORS, RECEIVE_LOGOUT_ERRORS } from '../actions/error_actions';
-import merge from 'lodash/merge';
+import { RECEIVE_ERRORS } from '../actions/error_actions';
 
-const noErrors = {authErrors: [], logoutErrors: []};
+const noErrors = [];
 
 const ErrorsReducer = (state = noErrors, action) => {
   Object.freeze(state);
   switch(action.type){
-    case RECEIVE_AUTH_ERRORS:
-      return merge(noErrors, {authErrors: action.errors});
-    case RECEIVE_LOGOUT_ERRORS:
-      return merge(noErrors, {logoutErrors: action.errors});
+    case RECEIVE_ERRORS:
+      return action.errors;
     default:
       return state;
   }

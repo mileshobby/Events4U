@@ -23,7 +23,7 @@ class AuthForm extends React.Component{
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.processForm(user); //ADD ERRORS HERE
+    this.props.processForm(user);
   }
 
   updateState(key){
@@ -36,7 +36,7 @@ class AuthForm extends React.Component{
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li key={`error-${i}-{error}`} className="errors">
             {error}
           </li>
         ))}
