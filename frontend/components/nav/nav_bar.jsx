@@ -5,6 +5,7 @@ class NavBar extends React.Component{
   constructor(props){
     super(props);
     this.loggedInLinks = this.loggedInLinks.bind(this);
+    this.signInAsGuest = this.signInAsGuest.bind(this);
   }
 
   loggedInLinks(){
@@ -43,10 +44,15 @@ class NavBar extends React.Component{
       </ul>
     );
   }
+
+  signInAsGuest(){
+    this.props.login({username: "GuestUser", password: "password"});
+  }
+
   loggedOutLinks(){
     return(
       <ul className="navbar-links" id='logged-out-links'>
-        <li>Demo</li>
+        <li onClick={this.signInAsGuest}>Demo</li>
         <li><Link to="/signup">Sign Up</Link></li>
         <li><Link to="/login">Log In</Link></li>
       </ul>

@@ -2,13 +2,24 @@
   display: flex;
   direction: row;
   justify-content: space-between;
-  height: 50px;
+  height: 60px;
   align-items: center;
   border-bottom: 1px solid grey;
+  background-color: white;
+  font-size: 20px;
+  color: #1A29
 }
 
 .logo{
   margin: 0px 15px;
+  padding: 16px;
+}
+
+.logo a{
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  font-family: 'Passion One', cursive;
 }
 
 .navbar-links {
@@ -17,11 +28,18 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  height: 100%;
 }
 
-.navbar-links li{
+.navbar-links li, .navbar-links button{
   margin: 0px 15px;
+  padding: 16px 0px;
+}
+
+.navbar-links button{
+  border: none;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: 20px;
 }
 .navbar-links li:hover{
   font-weight: bold;
@@ -31,12 +49,14 @@
 .dropdown {
     position: relative;
     display: inline-block;
+
 }
 .dropdown:hover .dropdown-content {
   background: red
 }
 
 .dropdown-content {
+    display: none;
     top: 50px;
     right: 195px;
     position: absolute;
@@ -45,8 +65,4 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 10;
-}
-
-.dropdown:hover {
-  background-color: red;
 }

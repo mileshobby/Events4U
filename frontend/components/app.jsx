@@ -1,5 +1,5 @@
 import React from 'react';
-import SessionFormContainer from './auth/auth_form_container';
+import AuthFormContainer from './auth/auth_form_container';
 import { Route } from 'react-router';
 import GreetingContainer from './auth/greeting_container';
 import { AuthRoute } from '../util/route_util';
@@ -10,9 +10,9 @@ const App = () => (
     <header>
       <NavBarContainer />
     </header>
-      <AuthRoute path="/login" component={SessionFormContainer} />
-      <AuthRoute path="/signup" component={SessionFormContainer} />
-      <div id='main-img-container'></div>
+      <GreetingContainer />
+      <AuthRoute path="/login" component={AuthFormContainer} />
+      <AuthRoute path="/signup" component={AuthFormContainer} />
   </div>
 );
 
