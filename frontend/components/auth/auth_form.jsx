@@ -46,40 +46,39 @@ class AuthForm extends React.Component{
 
   render(){
     return (
-      <div>
-        <form>
-          <h2>{this.header}</h2>
-          {this.navLink}
+      <div className="auth-form-container">
+        <form className="auth-form">
+
+          <div className="centered-text">
+            <h2>{this.header}</h2>
+            <h3>{this.navLink}</h3>
+          </div>
+
           {this.renderErrors()}
-          <label>
-            Username:
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={this.updateState("username")}
-              placeholder="username">
-            </input>
-          </label>
-
-          <br></br>
-
-          <label>
-            Password:
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.updateState("password")}
-              placeholder="password">
-            </input>
-          </label>
-
-          <br></br>
 
           <input
-            type="submit"
-            onClick={this.handleSubmit}
-            value={this.header}>
+            type="text"
+            value={this.state.username}
+            onChange={this.updateState("username")}
+            placeholder="Username">
           </input>
+
+        <br></br>
+
+          <input
+            type="password"
+            value={this.state.password}
+            onChange={this.updateState("password")}
+            placeholder="Password">
+          </input>
+
+        <br></br>
+
+        <input
+          type="submit"
+          onClick={this.handleSubmit}
+          value={this.header}>
+        </input>
 
 
         </form>
