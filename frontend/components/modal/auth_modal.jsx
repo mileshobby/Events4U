@@ -2,7 +2,7 @@ import Modal from 'react-modal';
 import React from 'react';
 import AuthFormContainer from '../auth/auth_form_container';
 
-class LoginModal extends React.Component{
+class AuthModal extends React.Component{
 
   constructor(props){
     super(props);
@@ -44,7 +44,7 @@ class LoginModal extends React.Component{
 
       return(
         <div>
-          <button onClick={this.openModal}>{this.props.type} Modal</button>
+          <button onClick={this.openModal}>{this.props.type}</button>
           <Modal
             isOpen={this.state.modalIsOpen}
             onRequestClose={this.closeModal}
@@ -58,4 +58,4 @@ class LoginModal extends React.Component{
     }
 }
 
-export default LoginModal;
+export default AuthModal;

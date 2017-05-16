@@ -10,8 +10,7 @@ const App = () => (
     <header>
       <NavBarContainer />
     </header>
-      <AuthRoute path="/login" component={AuthFormContainer} />
-      <AuthRoute path="/signup" component={AuthFormContainer} />
+
   </div>
 );
 

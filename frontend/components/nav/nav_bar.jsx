@@ -12,8 +12,10 @@ class NavBar extends React.Component{
   loggedInLinks(){
     return(
       <ul className="navbar-links" id='logged-in-links'>
-        <li className="dropdown">
+        <div className="dropdown">
+          <div>
           {this.props.currentUser.username}
+          </div>
           <ul className="dropdown-content">
             <li>
               Saved Events
@@ -24,22 +26,13 @@ class NavBar extends React.Component{
             <li>
               Hosted Events
             </li>
-            <li>
-              <button
-                className="log-out-button"
-                onClick={this.props.logout}>
-                Log Out
-              </button>
-            </li>
+            <button
+              className="log-out-button"
+              onClick={this.props.logout}>
+              Log Out
+            </button>
           </ul>
-        </li>
-        <li>
-          <button
-          className="log-out-button"
-          onClick={this.props.logout}>
-          Log Out
-          </button>
-        </li>
+        </div>
         <li>Browse Events</li>
         <li>Create Event</li>
       </ul>
@@ -54,8 +47,6 @@ class NavBar extends React.Component{
     return(
       <ul className="navbar-links" id='logged-out-links'>
         <li onClick={this.signInAsGuest}>Demo</li>
-        <li><Link to="/signup">Sign Up</Link></li>
-        <li><Link to="/login">Log In</Link></li>
         <li><AuthModal type="Log In" /></li>
         <li><AuthModal type="Sign Up" /></li>
       </ul>

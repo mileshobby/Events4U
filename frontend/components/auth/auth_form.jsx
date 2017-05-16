@@ -46,6 +46,7 @@ class AuthForm extends React.Component{
   toggleType(){
     this.state.username = "";
     this.state.password = "";
+    this.props.clearErrors();
     if(this.state.type === "Log In"){
       this.setState({type: "Sign Up"}) ;
     }

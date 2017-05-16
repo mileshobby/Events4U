@@ -46,7 +46,3 @@ button{
 	font-family: inherit;
 	font-size: inherit;
 }
-
-html, body{
-	min-height: 100%;
-}
