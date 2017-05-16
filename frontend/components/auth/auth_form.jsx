@@ -5,25 +5,27 @@ import { Link } from 'react-router-dom';
 class AuthForm extends React.Component{
   constructor(props){
     super(props);
-    this.state = { username: "", password: ""};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateState = this.updateState.bind(this);
-    this.header = (this.props.formType === "login") ? "Log In" : "Sign Up";
-    if(this.props.formType === "login"){
-      this.navLink = <Link to="/signup"> Don't have an account? Sign
-                      up instead! </Link>;
-    }
-    else{
-      this.navLink = <Link to="/login"> Already have an account? Sign
-                      in instead! </Link>;
-    }
     this.renderErrors = this.renderErrors.bind(this);
+    this.proessForm = this.processForm.bind(this);
+    this.toggleType = this.toggleType.bind(this);
+    this.state = { username: "", password: "", type: this.props.formType};
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = this.state;
-    this.props.processForm(user);
+    const user = {username: this.state.username, password: this.state.password};
+    this.processForm(user);
+  }
+
+  processForm(user){
+    if(this.state.type === "Log In"){
+      this.props.login(user);
+    }
+    else{
+      this.props.signup(user);
+    }
   }
 
   updateState(key){
@@ -31,6 +33,27 @@ class AuthForm extends React.Component{
       this.setState({[key]: e.target.value});
     };
   }
+
+  navLink(){
+    if(this.state.type === "Log In"){
+      return "Don't have an account? Sign up instead!" ;
+    }
+    else{
+      return "Already have an account? Sign in instead!";
+    }
+  }
+
+  toggleType(){
+    this.state.username = "";
+    this.state.password = "";
+    if(this.state.type === "Log In"){
+      this.setState({type: "Sign Up"}) ;
+    }
+    else{
+      this.setState({type: "Log In"});
+    }
+  }
+
 
   renderErrors() {
     return(
@@ -50,8 +73,7 @@ class AuthForm extends React.Component{
         <form className="auth-form">
 
           <div className="centered-text">
-            <h2>{this.header}</h2>
-            <h3>{this.navLink}</h3>
+            <h2>{this.state.type}</h2>
           </div>
 
           {this.renderErrors()}
@@ -80,8 +102,10 @@ class AuthForm extends React.Component{
           value={this.header}>
         </input>
 
+        <h3 onClick={this.toggleType}>{this.navLink()}</h3>
 
         </form>
+
       </div>
     );
   }

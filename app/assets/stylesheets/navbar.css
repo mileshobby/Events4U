@@ -46,6 +46,11 @@
   font-family: inherit;
   font-size: 20px;
 }
+
+.navbar-links button{
+  outline: 0;
+}
+
 .navbar-links li:hover{
   font-weight: bolder;
   cursor: pointer;
