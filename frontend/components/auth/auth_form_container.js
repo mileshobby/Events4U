@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
                 "login" : "signup";
   return {
     loggedIn: Boolean(state.currentUser),
-    errors: state.errors,
+    errors: state.errors.authErrors,
     formType: type
   };
 };
