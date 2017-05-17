@@ -42,6 +42,7 @@ class Api::EventsController < ApplicationController
   def show
     @event = Event.find_by(id: params[:id])
     if @event
+      @host = @event.host
       render :show
     else
       render json: ["We could not find this event in our database."], status: 404

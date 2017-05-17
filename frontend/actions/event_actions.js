@@ -2,11 +2,17 @@ import * as APIUtil from '../util/event_api_util';
 import { receiveErrors } from './error_actions';
 
 export const RECEIVE_EVENT = "RECEIVE_EVENT";
+export const RECEIVE_EVENT_DETAILS = "RECEIVE_EVENT_DETAILS";
 export const RECEIVE_EVENTS = "RECEIVE_EVENTS";
 export const DESTROY_EVENT = "DESTROY_EVENT";
 
-export const receiveEvent = event => ({
+export const receiveNewEvent = event => ({
   type: RECEIVE_EVENT,
+  event
+});
+
+export const receiveEventDetails = event => ({
+  type: RECEIVE_EVENT_DETAILS,
   event
 });
 
@@ -26,9 +32,9 @@ export const fetchAllEvents = () => dispatch => {
     .fail( err => dispatch(receiveErrors(err.responseJSON)));
 };
 
-export const fetchEvent = (id) => dispatch => {
+export const fetchEventDetails = (id) => dispatch => {
   return APIUtil.getEvent(id)
-    .then(event => dispatch(receiveEvent(event)))
+    .then(event => dispatch(receiveEventDetails(event)))
     .fail( err => dispatch(receiveErrors(err.responseJSON)));
 };
 
@@ -40,12 +46,12 @@ export const deleteEvent = (id) => dispatch => {
 
 export const updateEvent = (event1) => dispatch => {
   return APIUtil.updateEvent(event1)
-    .then((event2) => dispatch(receiveEvent(event2)))
+    .then((event2) => dispatch(receiveNewEvent(event2)))
     .fail( err => dispatch(receiveErrors(err.responseJSON)));
 };
 
 export const createEvent = (event1) => dispatch => {
   return APIUtil.createEvent(event1)
-    .then((event2) => dispatch(receiveEvent(event2)))
+    .then((event2) => dispatch(receiveNewEvent(event2)))
     .fail( err => dispatch(receiveErrors(err.responseJSON)));
 };

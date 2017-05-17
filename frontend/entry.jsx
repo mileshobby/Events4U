@@ -15,9 +15,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   else{
     store = configureStore();
   }
-  window.fetchAllEvents =fetchAllEvents;
-  window.fetchEvent = fetchEvent;
-  window.destroyEvent = deleteEvent;
   Modal.setAppElement('body');
   window.store = store; //REMOVE THIS
   const content = document.getElementById('content');
