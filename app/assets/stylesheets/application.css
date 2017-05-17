@@ -23,16 +23,7 @@ body{
   font-family: 'Maven Pro', sans-serif;
 }
 
-/*#main-img-container{
-  background-image: url("/assets/color_splash.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100vw;
-}*/
 
-/*#main-img-holder{
-  height: 60vh;
-}*/
 #main-home-img{
   width: 100vw;
 }
