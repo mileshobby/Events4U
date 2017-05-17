@@ -10,7 +10,6 @@ class Home extends React.Component{
     return(
       <div id="home">
         <img src="/assets/color_splash.jpg" id="main-home-img"></img>
-        <SearchBox />
       </div>
     );
   }
