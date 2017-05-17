@@ -4,5 +4,6 @@
     json.set! :image_url, event.image_url
     json.set! :date, event.date
     json.set! :venue, event.venue
+    json.set! :id, event.id
   end
 end

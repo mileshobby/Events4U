@@ -11,7 +11,7 @@ export const receiveEvent = event => ({
 });
 
 export const receiveEvents = events => ({
-  type: RECEIVE_EVENT,
+  type: RECEIVE_EVENTS,
   events
 });
 
@@ -20,11 +20,11 @@ export const destroyEvent = id => ({
   id
 });
 
-export const fetchAllEvents = () => dispatch => (
-  APIUtil.getEvents()
+export const fetchAllEvents = () => dispatch => {
+  return APIUtil.getEvents()
     .then((events) => dispatch(receiveEvents(events)))
-    .fail( err => dispatch(receiveErrors(err.responseJSON)))
-);
+    .fail( err => dispatch(receiveErrors(err.responseJSON)));
+};
 
 export const fetchEvent = (id) => dispatch => {
   return APIUtil.getEvent(id)

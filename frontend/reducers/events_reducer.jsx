@@ -14,7 +14,8 @@ const EventsReducer = (state = {}, action) => {
       return action.events;
     case DESTROY_EVENT:
       newState = merge({}, state);
-      delete newState[action.event.id];
+      delete newState[action.id];
+      return newState;
     default:
       return state;
   }
