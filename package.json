@@ -7,8 +7,13 @@
     "doc": "docs",
     "test": "test"
   },
+  "engines": {
+    "node": "4.1.1",
+    "npm": "2.1.x"
+  },
   "scripts": {
-    "webpack": "webpack -w"
+    "webpack": "webpack -w",
+    "postinstall": "webpack"
   },
   "keywords": [],
   "author": "",
