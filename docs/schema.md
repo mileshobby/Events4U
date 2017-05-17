@@ -17,7 +17,9 @@ full_description  text           not null
 image_url         string         not null, default: "default_image.jpg"
 date              date           not null, indexed
 time              time           not null
-host_id           integer            not null, indexed, ,foreign key (references users)   
+venue             string          
+address           string         not null
+host_id           integer        not null, indexed, ,foreign key (references users)   
 total_quantity    integer         
 quantity_left     integer        //only if I implement quantity**    
 price             float         not null, indexed

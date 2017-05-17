@@ -14,6 +14,7 @@
         title: "NBA Finals Game 7",
         image_url: "stephCurry.jpg", **in assets**
         date: "June 11, 2018",
+        venue: "Oracle Arena"
         id: 1
       },
     2: {...}
