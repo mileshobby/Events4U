@@ -46,3 +46,7 @@ button{
 	font-family: inherit;
 	font-size: inherit;
 }
+
+html, body, #content, #root, #app{
+	height: 100%;
+}

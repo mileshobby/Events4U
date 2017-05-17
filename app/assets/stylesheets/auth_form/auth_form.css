@@ -51,7 +51,7 @@
 }
 
 .auth-form input[type="submit"]{
-  background-color: #479200;
+  background-color: #99CCCC;
   color: white;
 }
 .auth-form input[type="submit"]:hover{

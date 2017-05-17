@@ -24,7 +24,13 @@ body{
 }
 
 #main-img-container{
-  background-image: url("/assetsColor_festival.jpg");
-  width: 100%;
-  height: 500px;
+  background-image: url("/assets/color_splash.jpg");
+  background-size: contain;
+  height: 100%;
+  padding: 100px;
+  background-repeat: no-repeat;
+}
+
+#main-img-holder{
+  height: 45vh;
 }
