@@ -33,11 +33,11 @@ Implementation Timeline:
 * Phase 1: Backend setup and Front End User Authentication (2 days)
   * Objective: Functioning rails project with front-end Authentication
 
-* Phase 2: Tickets Model, API, and components (1.5 days)
-  * Objective: Events can be created, read, edited and destroyed through the API.
-
-* Phase 3: Events (1.5 days)
+* Phase 2: Events (2 days)
   * Objective: Tickets belong to Events that can be created, read, edited and destroyed through the API.
+
+* Phase 3: Tickets Model, API, and components (1 days)
+  * Objective: Events can be created, read, edited and destroyed through the API.
 
 * Phase 4: Categories (2 day)
   * Objective: Events can be tagged with categories, and categories are searchable.
