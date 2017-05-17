@@ -14,7 +14,8 @@ class NavBar extends React.Component{
       <ul className="navbar-links" id='logged-in-links'>
         <div className="dropdown">
           <div>
-          {this.props.currentUser.username}
+          {this.props.currentUser.username}  &nbsp;
+          <i className="fa fa-angle-double-down" aria-hidden="true"></i>
           </div>
           <ul className="dropdown-content">
             <li>

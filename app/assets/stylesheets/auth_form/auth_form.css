@@ -12,17 +12,27 @@
 }
 
 .auth-form h2{
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .auth-form h3{
-  margin-top: 10px;
+  padding: 20px 0px 10px 0px;
+  cursor: pointer;
+  text-decoration: underline;
+  color: grey;
 }
 
 .auth-form .errors{
-  color: red;
+  color: #C63D0F;
+}
+
+.auth-form .errors-list{
+  list-style: circle;
+  margin-left: 20px;
+  margin-bottom: 5px;
 }
 
 .auth-form div.centered-text{
@@ -41,9 +51,10 @@
 }
 
 .auth-form input[type="submit"]{
-  background-color: #1A785D
+  background-color: #479200;
+  color: white;
 }
 .auth-form input[type="submit"]:hover{
   cursor: pointer;
-  opacity: 0.8
+  opacity: 0.7
 }
