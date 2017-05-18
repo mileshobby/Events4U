@@ -5,6 +5,8 @@ import Root from './components/root';
 import Modal from 'react-modal';
 import { fetchAllEvents, fetchEvent, deleteEvent} from './actions/event_actions';
 
+
+
 document.addEventListener('DOMContentLoaded',()=>{
   let store;
   if(window.currentUser){

@@ -35,7 +35,7 @@ class NavBar extends React.Component{
           </ul>
         </div>
         <li>Browse Events</li>
-        <li>Create Event</li>
+        <li><Link to="/new-event">Create Event</Link></li>
       </ul>
     );
   }

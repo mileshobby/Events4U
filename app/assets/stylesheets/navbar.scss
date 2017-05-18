@@ -33,7 +33,7 @@
   height: 100%;
 }
 
-.navbar-links li, .navbar-links button{
+.navbar-links li, .navbar-links button,{
   margin: 0px 15px;
   padding: 16px 0px;
 }
@@ -58,7 +58,7 @@
   color: #C63D0F
 }
 
-.navbar-links li:hover{
+.navbar-links li:hover, .navbar-links li a:hover{
   font-weight: bolder;
   cursor: pointer;
   color: #C63D0F
