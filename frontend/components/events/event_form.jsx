@@ -1,5 +1,6 @@
 import React from 'react';
 import UploadButton from './upload_button/upload_button';
+import Scroll from 'react-scroll';
 
 class EventForm extends React.Component{
   constructor(){
@@ -26,13 +27,22 @@ class EventForm extends React.Component{
     };
   }
 
+  componentWillMount(){
+    this.props.clearErrors();
+  }
+
   handleSubmit(e){
     e.preventDefault();
     let urlHolder = document.getElementById('image-url-input');
     let url = urlHolder.getAttribute('data-url');
     this.state.price = parseInt(this.state.price);
     this.state["image_url"] = url;
-    this.props.createEvent(this.state);
+    this.props.createEvent(this.state)
+      .fail(()=> {
+        let scroll = Scroll.animateScroll;
+        scroll.scrollToTop();
+      }
+    );
   }
 
   renderErrors() {

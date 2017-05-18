@@ -71,6 +71,9 @@
   border-bottom: 1px solid #000000;
   font-size: 16px;
   font-family: inherit;
+  &:focus{
+    border-bottom: 3px double black;
+  }
 }
 
 .new-event-step-1 input[type="date"]{
@@ -100,6 +103,7 @@
   letter-spacing: 150%;
   &:hover{
     cursor: pointer;
+    opacity: 0.6;
   }
   &:focus{
     outline: none;
@@ -168,5 +172,6 @@
   padding: 10px;
   &:hover{
     cursor: pointer;
+    background: #efefef;
   }
 }
