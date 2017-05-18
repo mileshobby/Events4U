@@ -9,7 +9,11 @@ class Home extends React.Component{
   render(){
     return(
       <div id="home">
-        <img src="/assets/color_splash.jpg" id="main-home-img"></img>
+        <img
+          src="http://res.cloudinary.com/events4u/image/upload/v1495089580/color_splash_copy_qli1my.jpg"
+          id="main-home-img">
+          
+        </img>
       </div>
     );
   }
