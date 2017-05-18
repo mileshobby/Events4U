@@ -18,7 +18,9 @@ const App = () => (
     <Route exact path="/" component={Home} />
     <Route exact path="/events/:eventId" component={EventDetailContainer} />
     <Route exact path="/new-event" component={EventFormContainer} />
-    <Footer />
+    <footer id='main-footer-container'>
+      <Footer />
+    </footer>
   </div>
 );
 

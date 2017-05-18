@@ -55,6 +55,10 @@ class EventForm extends React.Component{
         <form className="new-event-form">
           <h1>Create An Event</h1>
           <div className="new-event-step-1">
+              <header className="step-header">
+                <span className='step-num'>1</span>
+                <span className="step-name">Event Details</span>
+              </header>
               Title
               <input
                 type="text"
@@ -64,7 +68,6 @@ class EventForm extends React.Component{
               />
 
               Location
-              <br></br>
               <input
                 type="text"
                 value={venue}
@@ -122,8 +125,17 @@ class EventForm extends React.Component{
           </div>
 
           <div className="new-event-step-2">
+            <header className="step-header">
+              <span className='step-num'>2</span>
+              <span className="step-name">Upload Image (Optional)</span>
+            </header>
             <UploadButton />
           </div>
+
+          <header className="step-header">
+            <span className='step-num'>3</span>
+            <span className="step-name">Make this Event Live!</span>
+          </header>
 
           <div className="new-event-step-3">
             <input type="submit" onClick={this.handleSubmit} value="Create Event!"></input>
