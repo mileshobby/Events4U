@@ -4,6 +4,7 @@ import { createEvent, updateEvent, deleteEvent, fetchEventDetails }
   from '../../actions/event_actions';
 
 const mapStateToProps = state => ({
+  errors: state.errors
 });
 
 const mapDispatchToProps = dispatch => ({

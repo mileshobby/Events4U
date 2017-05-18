@@ -5,14 +5,13 @@ class Api::EventsController < ApplicationController
   end
 
   def create
-    debugger
     @event = Event.new(event_params)
     @event.host = current_user
     if @event.save
       @host = @event.host
       render :show
     else
-      render json: @event.errors_full_messages, status: 400
+      render json: @event.errors.full_messages, status: 400
     end
   end
 

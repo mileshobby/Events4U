@@ -19,3 +19,9 @@
   justify-content: flex-end;
   flex-direction: column;
 }
+
+#app{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

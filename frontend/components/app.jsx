@@ -12,12 +12,14 @@ import { Switch } from 'react-router';
 
 const App = () => (
   <div id='app'>
-    <header>
-      <NavBarContainer />
-    </header>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/events/:eventId" component={EventDetailContainer} />
-    <Route exact path="/new-event" component={EventFormContainer} />
+    <div id="main-content">
+      <header>
+        <NavBarContainer />
+      </header>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/events/:eventId" component={EventDetailContainer} />
+      <Route exact path="/new-event" component={EventFormContainer} />
+    </div>
     <footer id='main-footer-container'>
       <Footer />
     </footer>
