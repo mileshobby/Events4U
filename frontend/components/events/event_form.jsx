@@ -78,12 +78,12 @@ class EventForm extends React.Component{
 
     let categoryOptions = this.props.categories.map((category, i)=>(
       <label key={`check-${category.id}-${i}`}>
-        {category.name}
         <input
           type="checkbox"
           onChange={this.addCategory(category.id)}
           value={category.name}>
         </input>
+        {category.name}
       </label>
     ));
 
@@ -108,7 +108,7 @@ class EventForm extends React.Component{
                 onChange={this.handleChange("title")}
               />
 
-            <label>Location </label>
+            <label>Location <span className="required-field">*</span> </label>
               <div id='location-input'>
                 <input
                   type="text"
@@ -154,11 +154,10 @@ class EventForm extends React.Component{
                 onChange={this.handleChange("price")}
                 />
 
-              <label>Event Type <span className="required-field">*</span></label>
-            <select>
-              <option value="OIJF">IMPLEMENT THIS LATER</option>
-            </select>
-            {categoryOptions}
+              <div className='category-form-box'>
+                <h5>Categories</h5>
+                  {categoryOptions}
+              </div>
 
           </div>
 
