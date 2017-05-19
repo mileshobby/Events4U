@@ -10,7 +10,6 @@ import EventDetailContainer from './events/event_detail_container';
 import EventFormContainer from './events/event_form_container';
 import BrowseEventsContainer from './events/browse_events/browse_events_container';
 import { Switch } from 'react-router';
-import EventSliderContainer from './events/index_event/event_slider_container';
 
 const App = () => (
   <div id='app'>
@@ -19,7 +18,6 @@ const App = () => (
         <NavBarContainer />
       </header>
       <Route exact path="/" component={Home} />
-      <Route exact path="/" component={EventSliderContainer} />
       <AuthRoute exact path="/events/:eventId" component={EventDetailContainer} />
       <Route exact path="/new-event" component={EventFormContainer} />
       <Route exact path="/browse-events" component={ BrowseEventsContainer } />
