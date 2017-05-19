@@ -5,10 +5,12 @@ class Api::EventsController < ApplicationController
   end
 
   def create
+    debugger;
     @event = Event.new(event_params)
     @event.host = current_user
     if @event.save
       @host = @event.host
+      @event.category_ids = params[:event][:category_ids]
       render :show
     else
       render json: @event.errors.full_messages, status: 400
@@ -54,9 +56,9 @@ class Api::EventsController < ApplicationController
   def event_params
     params
     .require(:event)
-    .permit(:title, :short_description, :full_description,
+    .permit(:title, :full_description,
             :image_url, :date, :total_quantity,
-            :quantity_left, :price, :city_state_zip, :address, categories: [])
+            :quantity_left, :price, :city_state_zip, :venue, :street_address)
   end
 
 end

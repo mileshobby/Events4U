@@ -7,7 +7,6 @@ class EventForm extends React.Component{
     super();
     this.state = {
       title: "",
-      short_description: "",
       full_description: "",
       date: "",
       price: 0.00,
@@ -16,9 +15,11 @@ class EventForm extends React.Component{
       city_state_zip: "",
       image_url: "",
     };
+    this.event_categories = [];
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.addCategory = this.addCategory.bind(this);
   }
 
   handleChange(key){
@@ -27,8 +28,20 @@ class EventForm extends React.Component{
     };
   }
 
+  addCategory(category){
+    return (e) => {
+      if (this.event_categories[category]){
+        delete this.event_categories[category];
+      } else{
+        this.event_categories[category] = true;
+      }
+      console.log(this.event_categories);
+    };
+  }
+
   componentWillMount(){
     this.props.clearErrors();
+    this.props.fetchCategories();
   }
 
   handleSubmit(e){
@@ -37,6 +50,8 @@ class EventForm extends React.Component{
     let url = urlHolder.getAttribute('data-url');
     this.state.price = parseInt(this.state.price);
     this.state["image_url"] = url;
+    const ids = Object.keys(this.event_categories).map((id)=>parseInt(id));
+    this.state["category_ids"] = ids;
     this.props.createEvent(this.state)
       .fail(()=> {
         let scroll = Scroll.animateScroll;
@@ -59,7 +74,19 @@ class EventForm extends React.Component{
 
   render(){
     let {title, short_description, full_description, date, price, venue,
-    street_address, city_state_zip, image_url} = this.state;
+    street_address, city_state_zip, image_url, categories} = this.state;
+
+    let categoryOptions = this.props.categories.map((category, i)=>(
+      <label key={`check-${category.id}-${i}`}>
+        {category.name}
+        <input
+          type="checkbox"
+          onChange={this.addCategory(category.id)}
+          value={category.name}>
+        </input>
+      </label>
+    ));
+
     return (
       <div className="new-event-form-container">
         <form className="new-event-form">
@@ -105,19 +132,11 @@ class EventForm extends React.Component{
                 />
               </div>
 
-              <label>Short Description <span className="required-field">*</span> </label>
-              <textarea
-                value={short_description}
-                rows="5"
-                placeholder="One sentence overview of your event"
-                onChange={this.handleChange("short_description")}
-              />
-
-            <label>Full Description <span className="required-field">*</span></label>
+            <label>Description <span className="required-field">*</span></label>
               <textarea
                 value={full_description}
                 rows="15"
-                placeholder="Full Description"
+                placeholder="Description"
                 onChange={this.handleChange("full_description")}
                 />
 
@@ -139,6 +158,7 @@ class EventForm extends React.Component{
             <select>
               <option value="OIJF">IMPLEMENT THIS LATER</option>
             </select>
+            {categoryOptions}
 
           </div>
 
