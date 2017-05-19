@@ -56,7 +56,7 @@ class Api::EventsController < ApplicationController
     .require(:event)
     .permit(:title, :short_description, :full_description,
             :image_url, :date, :total_quantity,
-            :quantity_left, :price, :city_state_zip, :address)
+            :quantity_left, :price, :city_state_zip, :address, :category)
   end
 
 end
