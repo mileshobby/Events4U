@@ -8,11 +8,9 @@ class EventSliderItem extends React.Component{
   }
 
   render(){
-    let {title, image_url, date, venue, price, id} = this.props.event;
-    price = (price === 0 ? "Free" : `$${price}`);
+    let {title, image_url, date, venue, id} = this.props.event;
     return(
       <div className="event-slider-item">
-        <div className="price-tag-slider">{price}</div>
         <Link to={`/events/${id}`}>
           <img className="event-slider-item-img"
             src={image_url}

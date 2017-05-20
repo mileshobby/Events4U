@@ -24,12 +24,12 @@ class Home extends React.Component{
         <EventSliderContainer />
         <div className="see-more-button-container">
           <Link to="/browse-events" className='see-more-button'>
-            See More Events
+            See All Events
           </Link>
         </div>
         </section>
 
-        <h1 id="events-by-category">Browse Events By Category</h1>
+        <h1 id="events-by-category">Browse By Top Category</h1>
         <EventSearchContainer />
 
       </div>
