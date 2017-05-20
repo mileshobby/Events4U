@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :events, only: [:create, :destroy, :update, :index, :show]
   end
+
+  get 'api/events-filtered' => 'api/events#filter'
 end

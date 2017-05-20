@@ -5,7 +5,6 @@ class Api::EventsController < ApplicationController
   end
 
   def create
-    debugger;
     @event = Event.new(event_params)
     @event.host = current_user
     if @event.save
@@ -51,6 +50,16 @@ class Api::EventsController < ApplicationController
     else
       render json: ["We could not find this event in our database."], status: 404
     end
+  end
+
+  def filter
+    #BY CATEGORY
+    categories = Category.where(id: params[:category_ids])
+    @events = []
+    categories.each do |category|
+      @events.concat(category.events)
+    end
+    render :index
   end
 
   def event_params
