@@ -229,13 +229,13 @@ Industries represented at our Career Fairs: Sales, Inside Sales, Outside Sales, 
 
 #CATEGORY SEEDSCa
 
-Sports = Category.create(name: "Sports")
-Music = Category.create(name: "Music")
-Arts = Category.create(name: "Arts")
-Business = Category.create(name: "Business")
-Parties = Category.create(name: "Parties")
-Classes = Category.create(name: "Classes")
-Food = Category.create(name: "Food & Drink")
-Other = Category.create(name: "Other")
+Sports = Category.create(name: "Sports") #1
+Music = Category.create(name: "Music") #2
+Arts = Category.create(name: "Arts") #3
+Business = Category.create(name: "Business") #4
+Parties = Category.create(name: "Parties") #5
+Classes = Category.create(name: "Classes") #6
+Food = Category.create(name: "Food & Drink") #7
+Other = Category.create(name: "Other") #8
 
 #EVENT_CATEGORY_SEEDS
