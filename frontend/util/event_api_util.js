@@ -36,3 +36,12 @@ export const updateEvent = (event) => {
     data: {event}
   });
 };
+
+//data will come in the form {category_ids: [1,2,5], price: 50, ...}
+export const getFilteredEvents = (filters) => {
+  return $.ajax({
+    method: 'get',
+    url: '/api/events-filtered',
+    data: filters
+  });
+};

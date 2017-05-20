@@ -55,3 +55,8 @@ export const createEvent = (event1) => dispatch => {
     .then((event2) => dispatch(receiveNewEvent(event2)))
     .fail( err => dispatch(receiveErrors(err.responseJSON)));
 };
+
+export const fetchFilteredEvents = (filters) => dispatch => {
+  return APIUtil.getFilteredEvents(filters)
+    .then((events) => dispatch(receiveEvents(events)));
+};
