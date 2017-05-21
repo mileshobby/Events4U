@@ -10,6 +10,7 @@ import EventDetailContainer from './events/event_detail_container';
 import EventFormContainer from './events/event_form_container';
 import BrowseEventsContainer from './events/browse_events/browse_events_container';
 import UserEventsContainer from './events/user_events/user_events_container';
+import UserEvents from './events/user_events/user_events_container';
 import { Switch } from 'react-router';
 
 const App = () => (
