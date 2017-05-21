@@ -59,3 +59,9 @@ export const getHostedEvents = () => {
     url: '/api/events-hosted',
   });
 };
+export const getPurchasedEvents = () => {
+  return $.ajax({
+    method: 'get',
+    url: '/api/events-purchased',
+  });
+};
