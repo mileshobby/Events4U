@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :api do
+    get 'tickets/create'
+  end
+
   root "static_pages#root"
 
   namespace :api, { format: :json } do

@@ -84,6 +84,12 @@ class Api::EventsController < ApplicationController
     render :index
   end
 
+  def attended_events
+    @events = current_user.purchased_events
+    @bookmarked_events = current_user.bookmarked_events
+    render :index
+  end
+
   def event_params
     params
     .require(:event)
