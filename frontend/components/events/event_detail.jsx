@@ -4,6 +4,7 @@ import { Redirect, withRouter } from "react-router";
 class EventDetail extends React.Component{
   constructor(props){
     super(props);
+    this.toggleBookmark = this.toggleBookmark.bind(this);
   }
 
   componentWillMount(){
@@ -18,15 +19,27 @@ class EventDetail extends React.Component{
     }
   }
 
+  toggleBookmark(){
+    let {id, bookmarked} = this.props.eventDetails;
+    if(bookmarked){
+      this.props.unBookmarkEvent(id)
+        .then(this.props.fetchEventDetails(this.props.match.params.eventId));
+    }
+    else{
+      this.props.bookmarkEvent(id)
+        .then(this.props.fetchEventDetails(this.props.match.params.eventId));
+    }
+  }
+
   render(){
     let {title, full_description, image_url, host,
            price, date, venue, street_address, city_state_zip, bookmarked} = this.props.eventDetails;
     price = (price === 0 ? "Free" : `$${price}`);
     let bookmark;
     if (bookmarked){
-      bookmark = <i className="fa fa-bookmark fa-lg" aria-hidden="true"></i>;
+      bookmark = <i className="fa fa-bookmark fa-lg" onClick={this.toggleBookmark} aria-hidden="true"></i>;
     }
-    else bookmark = <i className="fa fa-bookmark-o fa-lg" aria-hidden="true"></i>;
+    else bookmark = <i className="fa fa-bookmark-o fa-lg" onClick={this.toggleBookmark} aria-hidden="true"></i>;
     return(
       <div id="event-details">
         <div id="event-details-left-col">
