@@ -12,6 +12,10 @@ class BrowseEvents extends React.Component{
     }
   }
 
+  componentDidMount(){
+    window.scrollTo(0,0);
+  }
+
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.eventId !== nextProps.match.params.eventId) {
       this.props.fetchAllEvents(nextProps.match.params.eventId);
