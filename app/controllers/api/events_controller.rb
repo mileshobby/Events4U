@@ -2,6 +2,11 @@ class Api::EventsController < ApplicationController
 
   def index
     @events = Event.all
+    if current_user
+      @bookmarked_events = current_user.bookmarked_events
+    else
+      @bookmarked_events = []
+    end
   end
 
   def create
@@ -58,6 +63,11 @@ class Api::EventsController < ApplicationController
     @events = []
     categories.each do |category|
       @events.concat(category.events)
+    end
+    if current_user
+      @bookmarked_events = current_user.bookmarked_events
+    else
+      @bookmarked_events = []
     end
     render :index
   end

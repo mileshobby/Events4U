@@ -6,5 +6,6 @@
     json.set! :date, event.date
     json.set! :venue, event.venue
     json.set! :id, event.id
+    json.set! :bookmarked, (@bookmarked_events.include?(event))
   end
 end
