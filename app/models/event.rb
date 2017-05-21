@@ -16,6 +16,11 @@ class Event < ApplicationRecord
     through: :bookmarks,
     source: :user
 
+  has_many :tickets
+  has_many :attendants,
+    through: :tickets,
+    source: :owner
+
   after_initialize :give_default_image_unless_provided
 
   def give_default_image_unless_provided

@@ -13,6 +13,13 @@ class User < ApplicationRecord
     through: :bookmarks,
     source: :event
 
+  has_many :tickets,
+    foreign_key: :user_id,
+    class_name: :Ticket
+  has_many :purchased_events,
+    through: :tickets,
+    source: :event
+
   def self.find_by_credentials(username, password)
     @user = User.find_by(username: username)
     if @user && @user.is_password?(password)
