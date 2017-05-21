@@ -26,9 +26,11 @@ class EventSlider extends React.Component {
     };
 
     let events = this.props.events.map((event, i)=>
-      <div key={`event-slider${event.id}i`}>
+      <div key={`event-slider${event.id}${i}${event.bookmarked}`}>
         <EventItem
-          event={event}/>
+          event={event}
+          bookmarkEvent={this.props.bookmarkEvent}
+          unBookmarkEvent={this.props.unBookmarkEvent}/>
       </div>);
     events = (events.length===0) ? <div></div> : events;
     return (
