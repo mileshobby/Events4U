@@ -85,3 +85,13 @@ export const unBookmarkEvent = eventId => dispatch => {
   return BookmarkAPIUtil.deleteBookmark(eventId)
     .then((event) => dispatch(removeBookmarkFromEvent(eventId)));
 };
+
+export const fetchHostedEvents = () => dispatch => {
+  return APIUtil.getHostedEvents()
+    .then((events) => dispatch(receiveEvents(events)));
+};
+
+export const fetchBookmarkedEvents = () => dispatch => {
+  return APIUtil.getBookmarkedEvents()
+    .then((events) => dispatch(receiveEvents(events)));
+};
