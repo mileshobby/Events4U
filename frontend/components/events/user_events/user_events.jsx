@@ -29,6 +29,13 @@ class UserEvents extends React.Component{
     this.fetchMatchingEvents(this.props.location.pathname);
   }
 
+  componentWillReceiveProps(nextProps) {
+    // in case user uses drop down to change path while already on account page
+    if (this.props.location.pathname !== nextProps.location.pathname) {
+      this.fetchMatchingEvents(nextProps.location.pathname);
+    }
+  }
+
   fetchMatchingEvents(path){
     if(path === '/user-events/bookmarks'){
       this.props.fetchBookmarkedEvents();
