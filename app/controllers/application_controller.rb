@@ -28,4 +28,8 @@ class ApplicationController < ActionController::Base
   def upload_preset
     ENV['upload_preset']
   end
+
+  def maps_key
+    ENV['maps_key']
+  end
 end
