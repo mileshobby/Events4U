@@ -23,7 +23,6 @@ class UploadButton extends React.Component{
         <button onClick={this.upload}>
           <i className="fa fa-cloud-upload" aria-hidden="true"></i>
           <div>Add Event Image</div>
-          <div>Bring your event to life</div>
           </button>
         <input type="hidden" id="image-url-input"></input>
       </div>

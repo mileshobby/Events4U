@@ -9,21 +9,9 @@ class BrowseEvents extends React.Component{
     super(props);
   }
 
-  // componentWillMount(){
-  //   if(this.props.events.length === 0){
-  //     this.props.fetchAllEvents(this.props.match.params.eventId);
-  //   }
-  // }
-
   componentDidMount(){
     window.scrollTo(0,0);
   }
-
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.match.params.eventId !== nextProps.match.params.eventId) {
-  //     this.props.fetchAllEvents(nextProps.match.params.eventId);
-  //   }
-  // }
 
   render(){
     const category = this.props.match.params.category;
@@ -35,7 +23,7 @@ class BrowseEvents extends React.Component{
     return(
       <div id="browse-events-container">
         <div id="filter-box-container">
-          <div>
+          <div className="google-map-box">
             <EventMap events={this.props.events}/>
           </div>
           <FilterContainer category={category}/>

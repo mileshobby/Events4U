@@ -43,6 +43,8 @@ event1 = Event.create!(title: "Warriors vs. Cavs NBA Finals Game 7",
                       city_state_zip: "Oakland, CA 94621",
                       host_id: User.find_by(username: "SeanPerfecto").id)
 
+EventCategory.create!(event_id: event1.id, category_id: Sports.id)
+
 event2 = Event.create!(title: "Pancakes & Booze Art Show",
                       full_description: "San Francisco's Largest Underground Art Show featuring:\n
                         -100+ Emerging Artists\n

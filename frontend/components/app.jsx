@@ -20,10 +20,10 @@ const App = () => (
         <NavBarContainer />
       </header>
       <Route exact path="/" component={Home} />
-      <AuthRoute exact path="/events/:eventId" component={EventDetailContainer} />
+      <Route exact path="/events/:eventId" component={EventDetailContainer} />
       <Route exact path="/new-event" component={EventFormContainer} />
       <Route path="/browse-events/:category" component={ BrowseEventsContainer } />
-      <Route path="/user-events" component={ UserEventsContainer } />
+      <AuthRoute path="/user-events" component={ UserEventsContainer } />
     </div>
     <footer id='main-footer-container'>
       <Footer />
