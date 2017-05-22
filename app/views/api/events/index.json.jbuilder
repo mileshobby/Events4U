@@ -7,5 +7,7 @@
     json.set! :venue, event.venue
     json.set! :id, event.id
     json.set! :bookmarked, (@bookmarked_events.include?(event))
+    json.set! :street_address, event.street_address
+    json.set! :city_state_zip, event.city_state_zip
   end
 end
