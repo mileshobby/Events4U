@@ -18,14 +18,6 @@ const EventsReducer = (state = {}, action) => {
       return newState;
     case RECEIVE_EVENTS:
       return action.events;
-    case ADD_BOOKMARK_TO_EVENT:
-      let bookmarkedEvent = state[action.id];
-      bookmarkedEvent["bookmarked"] = true;
-      return merge({}, state, {[action.id]: bookmarkedEvent});
-    case REMOVE_BOOKMARK_FROM_EVENT:
-      let unbookmarkedEvent = state[action.id];
-      unbookmarkedEvent["bookmarked"] = false;
-      return merge({}, state, {eventId: unbookmarkedEvent});
     case DESTROY_EVENT:
       newState = merge({}, state);
       delete newState[action.id];
