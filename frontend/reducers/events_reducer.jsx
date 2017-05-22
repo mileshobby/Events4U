@@ -16,6 +16,20 @@ const EventsReducer = (state = {}, action) => {
                         bookmarked: action.event.bookmarked};
       newState[action.event.id] = newEvent;
       return newState;
+    case ADD_BOOKMARK_TO_EVENT:
+      event = state[action.id];
+      if(!event){
+        return state;
+      }
+      event.bookmarked = true;
+      return merge({}, state, event);
+    case REMOVE_BOOKMARK_FROM_EVENT:
+      event = state[action.id];
+      if(!event){
+        return state;
+      }
+      event.bookmarked = false;
+      return merge({}, state, event);
     case RECEIVE_EVENTS:
       return action.events;
     case DESTROY_EVENT:
