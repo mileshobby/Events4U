@@ -144,7 +144,7 @@ EventCategory.create!(event_id: event21.id, category_id: Food.id)
 
 
 
-event29 = event28 = Event.create!(title: "Midnight Cruise WhiteOut",
+event29 = Event.create!(title: "Midnight Cruise WhiteOut",
                       full_description: "Take a 3 Hour Cruise aboard the Fume Blanc of Commodore Cruises a 4 million dollar, 340 passanger, luxury vessel. It is a Hudson Steamboat Replica with 3 floors, 2 DJs, and amazing views of the Bay Bridge, Golden Gate Bridge, Nob Hill, Alcatraz, and the Spectacular San Francisco Skyline. This season, from Memorial Day Weekend in May to September you'll have the chance to board the Fume Blanc and enjoy an entertaining cruise like none other. Get your tickets now and prepare for an experience you won't forget, but will most likely want to indulge in again.",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495490783/https_proxy_tnbzjy.jpg",
                       price: 49,
@@ -360,7 +360,7 @@ event25 = Event.create!(title: "Sunrise Yoga on the Beach",
                       price: 10,
                       street_address: "1504 Pershing Dr",
                       city_state_zip: "San Francisco, CA 94129",
-                      host_id: TechCompanySF.id)
+                      host_id: GuestUser.id)
 
 EventCategory.create!(event_id: event25.id, category_id: Classes.id)
 EventCategory.create!(event_id: event25.id, category_id: Sports.id)
@@ -373,7 +373,7 @@ event26 = Event.create!(title: "Summer Of Love Dance Party",
                       price: 5,
                       street_address: "1100 California Street",
                       city_state_zip: "San Francisco, CA 94108",
-                      host_id: PartyPeople.id)
+                      host_id: GuestUser.id)
 
 EventCategory.create!(event_id: event26.id, category_id: Parties.id)
 
@@ -397,19 +397,32 @@ event28 = Event.create!(title: "ArtSpan Artist Mixer",
                       venue: "SF Center for the Book",
                       street_address: "375 Rhode Island Street",
                       city_state_zip: "San Francisco, CA 94103",
-                      host_id: ArtSF.id)
+                      host_id: GuestUser.id)
 
 EventCategory.create!(event_id: event28.id, category_id: Arts.id)
+
+event32 = Event.create!(title: "Classic Hip-Hop Night",
+                      full_description: "MY MELODY classic hip-hop night with DJ Dave Paul at Public Works. All your favorite old school & golden era rap songs from the twenty year period of 1979-1999. ",
+                      image_url: "http://res.cloudinary.com/events4u/image/upload/v1495492320/https_3A_2F_2Fcdn.evbuc.com_2Fimages_2F31293101_2F7350857313_2F1_2Foriginal_qbbcio.jpg",
+                      date: "2017/7/25",
+                      venue: "Public Works",
+                      street_address: "161 Erie Street",
+                      city_state_zip: "San Francisco, CA 94103",
+                      host_id: PartyPeople.id)
+
+EventCategory.create!(event_id: event32.id, category_id: Arts.id)
 
 
 
 #EVENT_CATEGORY_SEEDS
-Bookmark.create!(user_id: GuestUser.id, event_id: event2.id)
-Bookmark.create!(user_id: GuestUser.id, event_id: event4.id)
-Bookmark.create!(user_id: GuestUser.id, event_id: event7.id)
-Bookmark.create!(user_id: GuestUser.id, event_id: event11.id)
-Bookmark.create!(user_id: GuestUser.id, event_id: event20.id)
+Bookmark.create!(user_id: GuestUser.id, event_id: event1.id)
+Bookmark.create!(user_id: GuestUser.id, event_id: event29.id)
+Bookmark.create!(user_id: GuestUser.id, event_id: event9.id)
 Bookmark.create!(user_id: GuestUser.id, event_id: event13.id)
-Ticket.create!(user_id: GuestUser.id, event_id: event2.id)
+Bookmark.create!(user_id: GuestUser.id, event_id: event11.id)
+Bookmark.create!(user_id: GuestUser.id, event_id: event21.id)
+Bookmark.create!(user_id: GuestUser.id, event_id: event6.id)
+Ticket.create!(user_id: GuestUser.id, event_id: event22.id)
 Ticket.create!(user_id: GuestUser.id, event_id: event3.id)
-Ticket.create!(user_id: GuestUser.id, event_id: event10.id)
+Ticket.create!(user_id: GuestUser.id, event_id: event27.id)
+Ticket.create!(user_id: GuestUser.id, event_id: event4.id)
