@@ -12,10 +12,17 @@ class Home extends React.Component{
   render(){
     return(
       <div id="home">
-        <img
-          src="http://res.cloudinary.com/events4u/image/upload/v1495089580/color_splash_copy_qli1my.jpg"
-          id="main-home-img">
-        </img>
+        <div id='main-home-img-container'>
+          <img
+            src="http://res.cloudinary.com/events4u/image/upload/v1495089580/color_splash_copy_qli1my.jpg"
+            id="main-home-img">
+          </img>
+          <div id="main-home-img-title">
+            <div>
+            Find Your Next Experience
+            </div>
+          </div>
+        </div>
         <section id='event-slider-container'>
         <h1 className='trending-events-title'>
           Trending Events4U

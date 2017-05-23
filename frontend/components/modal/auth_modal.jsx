@@ -1,6 +1,8 @@
 import Modal from 'react-modal';
 import React from 'react';
 import AuthFormContainer from '../auth/auth_form_container';
+import { withRouter } from 'react-router';
+import { browserHistory } from 'react-router-dom';
 
 class AuthModal extends React.Component{
 
@@ -11,9 +13,14 @@ class AuthModal extends React.Component{
     this.closeModal = this.closeModal.bind(this);
   }
 
+
+
   openModal() {
     this.props.clearErrors();
     this.setState({modalIsOpen: true});
+  }
+
+  componentWillReceiveProps(newProps){
   }
 
 
@@ -23,6 +30,10 @@ class AuthModal extends React.Component{
   }
 
     render(){
+      // let url = this.props.location.pathname;
+      // let last_seg = this.props.location.pathname.split("/");
+      // last_seg = last_seg[last_seg.length-1];
+      // let isOpen = this.state.modalIsOpen || (last_seg === "login");
       const style = {
         overlay : {
           position          : 'fixed',
@@ -42,7 +53,6 @@ class AuthModal extends React.Component{
           border                : '1px solid #D2D6DF'
         }
       };
-
       return(
         <div>
           <button onClick={this.openModal}>{this.props.type}</button>
@@ -59,4 +69,4 @@ class AuthModal extends React.Component{
     }
 }
 
-export default AuthModal;
+export default withRouter(AuthModal);

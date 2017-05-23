@@ -38,9 +38,29 @@ body{
   background-color: #e9ebee;
 }
 
+#main-home-img-container{
+  position: relative;
+}
 
 #main-home-img{
   width: 100vw;
+}
+
+#main-home-img-title{
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  div{
+    text-align: center;
+  }
 }
 
 .fa-bookmark{

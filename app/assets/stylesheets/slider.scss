@@ -59,16 +59,15 @@
     object-fit: cover;
     border-radius: 4px;
     width: 100%;
-    opacity: .9;
 
     &:hover{
-      opacity: 1;
+      -webkit-filter: brightness(80%); /* Safari */
+      filter: brightness(80%);
     }
   }
 
   .price-tag-slider{
     position: absolute;
-    background-color: white;
     top: 0;
     right: 0;
   }
@@ -79,7 +78,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: white;
     border-radius: 4px;
 
     .browse-event-title{
