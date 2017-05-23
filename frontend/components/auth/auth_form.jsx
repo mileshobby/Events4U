@@ -10,6 +10,7 @@ class AuthForm extends React.Component{
     this.renderErrors = this.renderErrors.bind(this);
     this.proessForm = this.processForm.bind(this);
     this.toggleType = this.toggleType.bind(this);
+    this.signInAsGuest = this.signInAsGuest.bind(this);
     this.state = { username: "", password: "", type: this.props.formType};
   }
 
@@ -17,6 +18,7 @@ class AuthForm extends React.Component{
     e.preventDefault();
     const user = {username: this.state.username, password: this.state.password};
     this.processForm(user);
+    this.props.clearErrors();
   }
 
   processForm(user){
@@ -55,6 +57,10 @@ class AuthForm extends React.Component{
     }
   }
 
+  signInAsGuest(){
+    this.props.login({username: "GuestUser", password: "password"})
+      .then(window.scrollTo(0,0));
+  }
 
   renderErrors() {
     return(
@@ -104,6 +110,10 @@ class AuthForm extends React.Component{
         </input>
 
         <h3 onClick={this.toggleType}>{this.navLink()}</h3>
+
+        <h3 onClick={this.signInAsGuest}>
+          Continue As Guest
+        </h3>
 
         </form>
 

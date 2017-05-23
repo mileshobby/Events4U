@@ -4,7 +4,8 @@ import { fetchAllEvents, bookmarkEvent, unBookmarkEvent, deleteEvent } from '../
 import { allEvents } from '../../../reducers/selectors';
 
 const mapStateToProps = (state) => ({
-  events: allEvents(state)
+  events: allEvents(state),
+  loggedIn: Boolean(state.currentUser)
 });
 
 const mapDispatchToProps = dispatch => ({

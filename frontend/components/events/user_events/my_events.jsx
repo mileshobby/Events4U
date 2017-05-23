@@ -15,7 +15,8 @@ class MyEvents extends React.Component{
                 bookmarkEvent={this.props.bookmarkEvent}
                 unBookmarkEvent={this.props.unBookmarkEvent}
                 hosted={this.props.hosted}
-                deleteEvent={this.props.deleteEvent} />
+                deleteEvent={this.props.deleteEvent}
+                loggedIn="true"/>
             </li>;
     });
     return(

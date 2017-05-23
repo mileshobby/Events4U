@@ -30,7 +30,8 @@ class EventSlider extends React.Component {
         <EventItem
           event={event}
           bookmarkEvent={this.props.bookmarkEvent}
-          unBookmarkEvent={this.props.unBookmarkEvent}/>
+          unBookmarkEvent={this.props.unBookmarkEvent}
+          loggedIn={this.props.loggedIn}/>
       </div>);
     events = (events.length===0) ? <div></div> : events;
     return (

@@ -19,6 +19,7 @@ class BrowseEvents extends React.Component{
       <BrowseEventsItem event={event} key={`${event.name}-${event.id}-${i}`}
         bookmarkEvent={this.props.bookmarkEvent}
         unBookmarkEvent={this.props.unBookmarkEvent}
+        loggedIn={this.props.loggedIn}
         />
   ));
     return(
