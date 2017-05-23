@@ -5,12 +5,12 @@ const Footer = () =>(
       <a
         href="https://www.linkedin.com/in/miles-hobby/"
         target="_blank">
-        <i className="fa fa-linkedin" aria-hidden="true">Linkedin</i>
+        <i className="fa fa-linkedin fa" aria-hidden="true">&nbsp; Linkedin</i>
       </a>
       <a
         href="https://github.com/mileshobby"
         target="_blank">
-        <i className="fa fa-github" aria-hidden="true">Github</i>
+        <i className="fa fa-github fa" aria-hidden="true">&nbsp; Github</i>
       </a>
   </footer>
 );
