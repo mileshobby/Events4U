@@ -13,7 +13,9 @@ class MyEvents extends React.Component{
               <BrowseEventItem
                 event={event}
                 bookmarkEvent={this.props.bookmarkEvent}
-                unBookmarkEvent={this.props.unBookmarkEvent} />
+                unBookmarkEvent={this.props.unBookmarkEvent}
+                hosted={this.props.hosted}
+                deleteEvent={this.props.deleteEvent} />
             </li>;
     });
     return(

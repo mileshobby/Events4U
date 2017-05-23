@@ -22,7 +22,7 @@ class EventSlider extends React.Component {
       autoplaySpeed: 3000,
       draggable: true,
       pauseOnHover: true,
-      arrows: true
+      arrows: true,
     };
 
     let events = this.props.events.map((event, i)=>
