@@ -18,9 +18,12 @@ class Home extends React.Component{
             id="main-home-img">
           </img>
           <div id="main-home-img-title">
-            <div>
-            Find Your Next Experience
-            </div>
+              <span className="main-title">
+                Find Your Next Experience
+              </span>
+              <span className="sub-title">
+                Buy & Sell Tickets for Bay Area Events
+              </span>
           </div>
         </div>
         <section id='event-slider-container'>

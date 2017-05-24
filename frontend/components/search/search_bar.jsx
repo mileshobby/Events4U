@@ -32,7 +32,7 @@ class SearchBar extends React.Component{
     return(
         <form onSubmit={this.search} className="search">
           <input
-            placeholder="festival, party, concert..."
+            placeholder="concert, party, festival..."
             type="search"
             value={this.state.searchString}
             onChange={this.handleChange}

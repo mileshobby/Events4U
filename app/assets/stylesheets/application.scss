@@ -41,6 +41,7 @@ body{
 
 #main-home-img-container{
   position: relative;
+  height: 38.503vw;
 }
 
 #main-home-img{
@@ -51,6 +52,7 @@ body{
   position: absolute;
   top: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   right: 0;
@@ -59,6 +61,10 @@ body{
   color: white;
   font-size: 50px;
   font-weight: bold;
+  .sub-title{
+    font-size: 30px;
+    margin-top: 50px;
+  }
   &:hover{
     cursor: default;
     -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -66,7 +72,7 @@ body{
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;
   }
-  div{
+  span{
     text-align: center;
   }
 }

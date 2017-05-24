@@ -25,7 +25,6 @@ class UploadButton extends React.Component{
   }
 
   render(){
-    console.log(this.state);
     return (
       <div className="upload-form">
         <button onClick={this.upload} id='upload-button'>

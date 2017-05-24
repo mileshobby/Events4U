@@ -14,11 +14,12 @@ GuestUser = User.create!(username: "GuestUser", password: "password")
 
 MilesHobby = User.create!(username: "MilesHobby", password: "password")
 SeanPerfecto = User.create!(username: "SeanPerfecto", password: "password")
-RichardPham = User.create!(username: "RPham17", password: "password")
+JustinJackson = User.create!(username: "JJackson", password: "password")
 Insomniac = User.create!(username: "InsomniacEvents", password: "password")
 TechCompanySF = User.create!(username: "TechCompanySF", password: "password")
 PartyPeople = User.create!(username: "PartyPeople", password: "password")
 ArtSF = User.create!(username: "ArtSF", password: "password")
+BigSportsBrand = User.create!(username: "BigSportsBrand", password: "password")
 
 Category.destroy_all
 
@@ -176,7 +177,7 @@ event10 = Event.create!(title: "San Francisco Shakespeare Fesitval",
                       venue: "San Francisco Shakespeare",
                       street_address: "1560 Davidson Ave",
                       city_state_zip: "San Francisco, CA 94125",
-                      host_id: RichardPham.id)
+                      host_id: MilesHobby.id)
 
 EventCategory.create!(event_id: event10.id, category_id: Arts.id)
 
@@ -235,7 +236,7 @@ event14 = Event.create!(title: "Giants vs. Marlins",
                       price: 40,
                       street_address: "24 Willie Mays Plaza",
                       city_state_zip: "San Francisco, CA 94107",
-                      host_id: RichardPham.id)
+                      host_id: BigSportsBrand.id)
 
 EventCategory.create!(event_id: event14.id, category_id:Sports.id)
 
@@ -411,6 +412,31 @@ event32 = Event.create!(title: "Classic Hip-Hop Night",
                       host_id: PartyPeople.id)
 
 EventCategory.create!(event_id: event32.id, category_id: Arts.id)
+
+event33 = Event.create!(title: "Oakland Raiders vs. New England Patriots",
+                      full_description: "Watch the Oakland Raiders take on the New England patriots in this epic sports match up. This will be a great day for football fans in the Bay Area as the defending champs come to Oakland for a huge game.",
+                      image_url: "http://res.cloudinary.com/events4u/image/upload/v1495646228/oakland-raiders-wallpaper-hd-wallpaper-oakland-raider-raiders-players-stadium-skull-fans-helmet-hd_sffmrk.jpg",
+                      date: "2017/10/3",
+                      venue: "O.co Coliseum",
+                      price: 70,
+                      street_address: "7000 Coliseum Way",
+                      city_state_zip: "Oakland, CA 94621",
+                      host_id: BigSportsBrand.id)
+
+EventCategory.create!(event_id: event33.id, category_id: Sports.id)
+
+event34 = Event.create!(title: "SF Kite Festival",
+                      full_description: "Bring your kites to the SF kite festival, where people of all ages are welcome! There will be food, drink, and lots of good times. If you are looking for some family fun, this is the place to come!",
+                      image_url: "http://res.cloudinary.com/events4u/image/upload/v1495646864/singlelinekites_x1f7eh.png",
+                      date: "2017/7/13",
+                      venue: "Dolores Park",
+                      street_address: "Dolores St & 19th St,",
+                      city_state_zip: "San Francisco, CA 94114",
+                      host_id: Sports.id)
+
+EventCategory.create!(event_id: event34.id, category_id: Parties.id)
+EventCategory.create!(event_id: event34.id, category_id: Food.id)
+EventCategory.create!(event_id: event34.id, category_id: Arts.id)
 
 
 

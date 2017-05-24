@@ -17,13 +17,7 @@ class EventMap extends React.Component{
   }
 
   componentDidUpdate() {
-    if (this.props.singleEvent) {
-      const targetEventKey = Object.keys(this.props.events)[0];
-      const targetEvent = this.props.events[targetEventKey];
-      this.MarkerManager.updateMarkers([targetEvent]); //grabs only that one bench
-    } else {
       this.MarkerManager.updateMarkers(this.props.events);
-    }
   }
 
   handleMarkerClick(event) {
