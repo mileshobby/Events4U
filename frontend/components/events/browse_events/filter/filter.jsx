@@ -56,6 +56,10 @@ class Filter extends React.Component{
     if(category === 'All'){
       this.props.fetchAllEvents();
     }
+    else if(category === 'Search'){
+      let searchString = this.props.match.params.searchString;
+      this.props.fetchFilteredEvents(searchString);
+    }
     else{
       this.props.fetchFilteredEvents({category_names: [category]});
     }

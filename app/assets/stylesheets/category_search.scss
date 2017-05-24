@@ -22,8 +22,6 @@
 
       &:hover{
         cursor: pointer;
-        // -webkit-filter: brightness(90%) !important; /* Safari */
-        // filter: brightness(90%) !important;
         transform: scale(1.05);
       }
     }
@@ -45,11 +43,8 @@
       color: white;
       font-size: 25px;
       letter-spacing: 125%;
-      z-index: 10000;
       font-weight: bold;
       margin-top: 30px;
-      -webkit-filter: brightness(100%) !important; /* Safari */
-      filter: brightness(100%) !important;
     }
 
     .pic-text-secret{
@@ -62,9 +57,7 @@
       text-align: center;
       -webkit-transition: visibility 100ms;
       transition: visibility 100ms;
-      z-index: 10000;
-      -webkit-filter: brightness(100%) !important; /* Safari */
-      filter: brightness(100%) !important;
+      line-height: 1.25;
     }
 
     .cat-selector{

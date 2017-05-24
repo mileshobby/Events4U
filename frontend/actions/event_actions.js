@@ -9,6 +9,7 @@ export const RECEIVE_EVENTS = "RECEIVE_EVENTS";
 export const DESTROY_EVENT = "DESTROY_EVENT";
 export const ADD_BOOKMARK_TO_EVENT = "ADD_BOOKMARK_TO_EVENT";
 export const REMOVE_BOOKMARK_FROM_EVENT = "REMOVE_BOOKMARK_FROM_EVENT";
+export const CLEAR_EVENT_DETAILS = "CLEAR_EVENT_DETAILS";
 
 export const receiveNewEvent = event => ({
   type: RECEIVE_EVENT,
@@ -28,6 +29,10 @@ export const receiveEvents = events => ({
 export const destroyEvent = id => ({
   type: DESTROY_EVENT,
   id
+});
+
+export const clearEventDetails = () => ({
+  type: CLEAR_EVENT_DETAILS
 });
 
 export const addBookmarkToEvent = id => ({
@@ -104,5 +109,10 @@ export const buyTicket = (eventId) => dispatch => {
 
 export const fetchAllTickets = () => dispatch => {
   return APIUtil.getPurchasedEvents()
+    .then((events) => dispatch(receiveEvents(events)));
+};
+
+export const fetchMatchingEvents = (search_string) => dispatch => {
+  return APIUtil.searchEvents(search_string)
     .then((events) => dispatch(receiveEvents(events)));
 };
