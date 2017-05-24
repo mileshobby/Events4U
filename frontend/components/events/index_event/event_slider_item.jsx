@@ -30,7 +30,8 @@ class EventSliderItem extends React.Component{
       bookmark = <i className="fa fa-bookmark fa-lg" onClick={this.toggleBookmark} aria-hidden="true"></i>;
     }
     else bookmark = <i className="fa fa-bookmark-o fa-lg" onClick={this.toggleBookmark} aria-hidden="true"></i>;
-
+    let dateString = new Date(date);
+    dateString = dateString.toDateString();
     return(
       <div className="event-slider-item">
         <Link to={`/events/${id}`}>
@@ -44,7 +45,7 @@ class EventSliderItem extends React.Component{
               <div className='browse-event-title'>{title}</div>
               {bookmark}
             </div>
-              <div className='slider-date'>{date} &#8226; {venue}</div>
+              <div className='slider-date'>{dateString} &#8226; {venue}</div>
         </span>
 
 

@@ -24,9 +24,9 @@ class BrowseEvents extends React.Component{
         />
   ));
     if (events.length === 0){
-      events = <div id="empty-search-results">Sorry! We could not find any events matching "{this.props.match.params.searchString}". We are still
+      events = <div className="search-results-text">Sorry! We could not find any events matching "{this.props.match.params.searchString}". We are still
                     a growing web service with a limited number of events. Try some popular searches, like...
-                    <b>concert</b>, <b>festival</b>, or <b>game</b>! </div>;
+                    <strong>concert</strong>, <strong>festival</strong>, or <strong>game</strong>! </div>;
     }
     return(
       <div id="browse-events-container">

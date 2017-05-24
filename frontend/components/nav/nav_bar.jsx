@@ -62,7 +62,7 @@ class NavBar extends React.Component{
       <nav id='main-nav'>
         <div id='left-nav'>
           <div className="logo"><Link to="/">Events4U</Link></div>
-          <SearchBar/>
+          <SearchBar fetchMatchingEvents={this.props.fetchMatchingEvents}/>
         </div>
         {navLinks}
       </nav>

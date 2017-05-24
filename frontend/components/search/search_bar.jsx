@@ -14,8 +14,12 @@ class SearchBar extends React.Component{
     e.preventDefault();
     const searchString = this.state.searchString;
     if(searchString.length > 0){
-      this.props.history.push(`/browse-events/all/${searchString}`);
-      this.setState({searchString: ""});
+      this.props.fetchMatchingEvents(searchString)
+      .then( () => {
+        this.props.history.push(`/browse-events/Search`);
+        this.setState({searchString: ""});
+        }
+      );
     }
   }
 
