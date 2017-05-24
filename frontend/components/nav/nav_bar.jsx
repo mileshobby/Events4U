@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, withRouter } from 'react-router-dom';
 import AuthModal from '../modal/auth_modal';
+import SearchBar from '../search/search_bar';
 
 class NavBar extends React.Component{
   constructor(props){
@@ -60,6 +61,7 @@ class NavBar extends React.Component{
     return(
       <nav id='main-nav'>
         <div className="logo"><Link to="/">Events4U</Link></div>
+        <SearchBar/>
         {navLinks}
       </nav>
     );

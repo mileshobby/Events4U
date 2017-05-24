@@ -37,7 +37,7 @@ Bookmark.destroy_all
 Ticket.destroy_all
 
 event1 = Event.create!(title: "Warriors vs. Cavs NBA Finals Game 7",
-                      full_description: "Watch as Steph Curry takes on Lebron James in the epic ending to a trilogy.",
+                      full_description: "Watch as Steph Curry takes on Lebron James in the epic ending to a trilogy. This sports event is a can't miss for basketball fans.",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487301/i_ap8ujj.jpg",
                       date: "2017/06/06",
                       price: 300.00,
@@ -70,7 +70,7 @@ EventCategory.create!(event_id: event2.id, category_id: Music.id)
 EventCategory.create!(event_id: event2.id, category_id: Food.id)
 
 event3 = Event.create!(title: "Outside Lands",
-                      full_description: "The 10th annual Outside Lands Festival will take place in San Francisco’s historic Golden Gate Park August 11 – 13. Festival organizers Another Planet Entertainment, Superfly and Starr Hill have just detailed the lineup for this year’s event which will be headlined by The Who, Metallica and Gorillaz. Lorde, Fleet Foxes, Queens of the Stone Age, alt-J, Solange, A Tribe Called Quest, Little Dragon, Belle and Sebastian, The Avett Brothers, Above & Beyond, Tove Lo, Action Bronson and Thundercat join the headliners at the top of this year’s lineup. Rebelution, Dawes, Real Estate, Temples, Warpaint, Khruangbin, Lee Fields & The Expressions and Lawrence are also among the acts confirmed for Outside Lands ’17.",
+                      full_description: "The 10th annual Outside Lands Festival will take place in San Francisco’s historic Golden Gate Park August 11 – 13. Festival organizers Another Planet Entertainment, Superfly and Starr Hill have just detailed the lineup for this year’s event which will be headlined by The Who, Metallica and Gorillaz. Lorde, Fleet Foxes, Queens of the Stone Age, alt-J, Solange, A Tribe Called Quest, Little Dragon, Belle and Sebastian, The Avett Brothers, Above & Beyond, Tove Lo, Action Bronson and Thundercat join the headliners at the top of this year’s lineup. Rebelution, Dawes, Real Estate, Temples, Warpaint, Khruangbin, Lee Fields & The Expressions and Lawrence are also among the acts confirmed for Outside Lands ’17. This is going to be a fantastic concert.",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487442/outside-lands1_whiddw.jpg",
                       date: "2017/8/11/",
                       price: 500.00,
@@ -83,7 +83,7 @@ EventCategory.create!(event_id: event3.id, category_id:Music.id)
 EventCategory.create!(event_id: event3.id, category_id:Food.id)
 
 event4 = Event.create!(title: "Imagine Dragons Evolve Tour",
-                      full_description: "Evolve (stylized as ƎVOLVE) is the upcoming third studio album by American rock band Imagine Dragons, scheduled to be released on June 23, 2017 through KIDinaKORNER and Interscope Records. The album is the band's new material follow-up to their second studio album, Smoke + Mirrors. After the release of Smoke + Mirrors and its respective world tour, a self-imposed hiatus for 2016 and cryptic messages from the band through their social media gained anticipation for their third album. The album was finally announced on May 9, with the initiation of the album's pre-order. In comparison to Night Visions and Smoke + Mirrors, frontman Dan Reynolds explained that the album will be an 'evolution for Imagine Dragons'.",
+                      full_description: "Evolve (stylized as ƎVOLVE) is the upcoming third studio album by American rock band Imagine Dragons, scheduled to be released on June 23, 2017 through KIDinaKORNER and Interscope Records. The album is the band's new material follow-up to their second studio album, Smoke + Mirrors. After the release of Smoke + Mirrors and its respective world tour, a self-imposed hiatus for 2016 and cryptic messages from the band through their social media gained anticipation for their third album. The album was finally announced on May 9, with the initiation of the album's pre-order. In comparison to Night Visions and Smoke + Mirrors, frontman Dan Reynolds explained that the album will be an 'evolution for Imagine Dragons' This is going to be a fantastic concert.",
                       image_url: "http://www.amwaycenter.com/assets/img/ImagineDragons_WEB_EventImage-897067549b.jpg",
                       date: "2017/08/11",
                       price: 50.00,
@@ -107,7 +107,7 @@ event22 = Event.create!(title: "San Francisco Wine Tasting",
 EventCategory.create!(event_id: event22.id, category_id: Food.id)
 
 event5 = Event.create!(title: "Bruno Mars: 24K Magic World Tour",
-                      full_description: "The North American leg will follow kicking off July 15 at T-Mobile Arena in Las Vegas and then visit over 45 cities across the U.S. including three stops in Northern California including dates at Golden 1 Center in Sacramento Tuesday, July 18. For complete details, please visit The 24K Magic World Tour official homepage at http://www.brunomars.com. Tickets for The 24K Magic World Tour, produced by Live Nation, go on sale 10am on Monday, November 21. The 24K Magic World Tour celebrates Mars' eagerly anticipated new album, 24K Magic, set to arrive worldwide on Friday, November 18 on Atlantic Records. Pre-orders are available now via the Bruno Mars Official Store, with all pre-orders from the store receiving early access to tickets for The 24K Magic Tour.",
+                      full_description: "The North American leg will follow kicking off July 15 at T-Mobile Arena in Las Vegas and then visit over 45 cities across the U.S. including three stops in Northern California including dates at Golden 1 Center in Sacramento Tuesday, July 18. For complete details, please visit The 24K Magic World Tour official homepage at http://www.brunomars.com. Tickets for The 24K Magic World Tour, produced by Live Nation, go on sale 10am on Monday, November 21. The 24K Magic World Tour celebrates Mars' eagerly anticipated new album, 24K Magic, set to arrive worldwide on Friday, November 18 on Atlantic Records. Pre-orders are available now via the Bruno Mars Official Store, with all pre-orders from the store receiving early access to tickets for The 24K Magic Tour. This is going to be a fantastic concert.",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495490107/maxresdefault_xt8kli.jpg",
                       date: "2017/6/18/",
                       price: 75.00,
@@ -119,7 +119,7 @@ event5 = Event.create!(title: "Bruno Mars: 24K Magic World Tour",
 EventCategory.create!(event_id: event5.id, category_id:Music.id)
 
 event6 = Event.create!(title: "Ed Sheeran: The Divide World Tour",
-                      full_description: "2017 sees Ed Sheeran taking his blockbuster studio album Divide on tour across North America. The British artist's status as one of the biggest singer-songwriters out at the moment is certainly cemented in this, his third album, which contains the mega-hit singles Shape Of You, and Castle On The Hill. It's seen him topping the charts across the world and infuses his delicate, acoustic pop with even more pronounced R&B flourishes.",
+                      full_description: "2017 sees Ed Sheeran taking his blockbuster studio album Divide on tour across North America. The British artist's status as one of the biggest singer-songwriters out at the moment is certainly cemented in this, his third album, which contains the mega-hit singles Shape Of You, and Castle On The Hill. It's seen him topping the charts across the world and infuses his delicate, acoustic pop with even more pronounced R&B flourishes. This is going to be a fantastic concert.",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487511/sheeran.png",
                       date: "2017/6/18/",
                       price: 35.00,
@@ -145,7 +145,7 @@ EventCategory.create!(event_id: event21.id, category_id: Food.id)
 
 
 event29 = Event.create!(title: "Midnight Cruise WhiteOut",
-                      full_description: "Take a 3 Hour Cruise aboard the Fume Blanc of Commodore Cruises a 4 million dollar, 340 passanger, luxury vessel. It is a Hudson Steamboat Replica with 3 floors, 2 DJs, and amazing views of the Bay Bridge, Golden Gate Bridge, Nob Hill, Alcatraz, and the Spectacular San Francisco Skyline. This season, from Memorial Day Weekend in May to September you'll have the chance to board the Fume Blanc and enjoy an entertaining cruise like none other. Get your tickets now and prepare for an experience you won't forget, but will most likely want to indulge in again.",
+                      full_description: "Take a 3 Hour Cruise aboard the Fume Blanc of Commodore Cruises a 4 million dollar, 340 passanger, luxury vessel. It is a Hudson Steamboat Replica with 3 floors, 2 DJs, and amazing views of the Bay Bridge, Golden Gate Bridge, Nob Hill, Alcatraz, and the Spectacular San Francisco Skyline. This season, from Memorial Day Weekend in May to September you'll have the chance to board the Fume Blanc and enjoy an entertaining cruise like none other. Get your tickets now and prepare for an experience you won't forget, but will most likely want to indulge in again. Lots of music and fun in this epic party!",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495490783/https_proxy_tnbzjy.jpg",
                       price: 49,
                       date: "2017/8/12",
@@ -157,7 +157,7 @@ EventCategory.create!(event_id: event29.id, category_id: Parties.id)
 
 
 event9 = Event.create!(title: "Fillmore Jazz Festival",
-                      full_description: "From sunup to sundown, visitors can groove to the sounds of live music from multiple stages, browse the offerings of over 12 blocks of fine art and crafts and enjoy gourmet food and beverages. Asian to Cajun, paintings to pottery, old favorites and new directions, the Fillmore Jazz Festival is not to be missed.",
+                      full_description: "From sunup to sundown, visitors can groove to the sounds of live music from multiple stages, browse the offerings of over 12 blocks of fine art and crafts and enjoy gourmet food and beverages. Asian to Cajun, paintings to pottery, old favorites and new directions, the Fillmore Jazz Festival is not to be missed. Lots of music in fun in this great party.",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487592/jazz-fest-fillmore_kq9xlw.jpg",
                       date: "2017/7/1",
                       venue: "Filmore District",
@@ -182,7 +182,7 @@ EventCategory.create!(event_id: event10.id, category_id: Arts.id)
 
 
 event11 = Event.create!(title: "San Francisco Marathon",
-                      full_description: %Q(Enjoy the amazing city of San Francisco by taking part in one of the world's great marathons. The USAT&F Certified course is a "best of San Francisco" tour and includes a loop over the Golden Gate Bridge. Choose from running the marathon, half marathon, progressive marathon, 5K run/walk races or really take on the challenge with the “Worth the Hurt” 52.4 double marathon.),
+                      full_description: %Q(Enjoy the amazing city of San Francisco by taking part in one of the world's great marathons. The USAT&F Certified course is a "best of San Francisco" tour and includes a loop over the Golden Gate Bridge. Choose from running the marathon, half marathon, progressive marathon, 5K run/walk races or really take on the challenge with the “Worth the Hurt” 52.4 double marathon. This will be a terrific sports event with a great crowd!),
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487660/sfmarathon_buhlsd.jpg",
                       date: "2017/7/23",
                       venue: "Ferry Building",
@@ -205,7 +205,7 @@ event12 = Event.create!(title: "Japan Film Festival of San Francisco",
 EventCategory.create!(event_id: event12.id, category_id:Arts.id)
 
 event13 = Event.create!(title: "Fourth of July Waterfront Festival",
-                      full_description: %Q(Dazzling fireworks, local bands, food, arts and crafts ignite this annual waterfront party. Fireworks begin around 9:30 p.m. Dress warmly.),
+                      full_description: %Q(Dazzling fireworks, local bands, food, arts and crafts ignite this annual waterfront party. Fireworks begin around 9:30 p.m. Dress warmly. This will be a really fun time!),
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487775/san-fransisco-firework1_btndvp.jpg",
                       date: "2017/7/4",
                       venue: "Pier 39",
@@ -216,7 +216,7 @@ event13 = Event.create!(title: "Fourth of July Waterfront Festival",
 EventCategory.create!(event_id: event13.id, category_id:Parties.id)
 
 event7 = Event.create!(title: "Cazzette Live",
-                      full_description: "SELECT Entertainment welcomes back one of favorite residents, CAZZETTE, to Love + Propaganda on July 21st! The last two shows with Cazzette have sold out and we expect this show to be just as big! Cazzette have built up a solid track record of doing things their own way. With a reputation for topping the Billboard Dance Charts, frequenting Hype Machines top 10 and more than 220m collective streams to their name, the Stockholm-based duo continues to blend genres and burst comfort zones across the board with their highly evolved take on the modern dance landscape. Opening set by Waev. For table reservations email infoselectsf@gmail.com or call 650.274.5736 21+",
+                      full_description: "SELECT Entertainment welcomes back one of favorite residents, CAZZETTE, to Love + Propaganda on July 21st! The last two shows with Cazzette have sold out and we expect this show to be just as big! Cazzette have built up a solid track record of doing things their own way. With a reputation for topping the Billboard Dance Charts, frequenting Hype Machines top 10 and more than 220m collective streams to their name, the Stockholm-based duo continues to blend genres and burst comfort zones across the board with their highly evolved take on the modern dance music landscape. Opening set by Waev. For table reservations email infoselectsf@gmail.com or call 650.274.5736 21+",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487538/cazzette.jpg",
                       date: "2017/6/21",
                       price: 35.00,
@@ -228,7 +228,7 @@ event7 = Event.create!(title: "Cazzette Live",
 EventCategory.create!(event_id: event7.id, category_id:Music.id)
 
 event14 = Event.create!(title: "Giants vs. Marlins",
-                      full_description: %Q(The San Francisco Giants take on the Miami Marlins in this MLB matchup at AT&T Park.),
+                      full_description: %Q(The San Francisco Giants take on the Miami Marlins in this MLB matchup at AT&T Park. This sports event is a can't miss for baseball fans.),
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487795/San-Francisco_sqrrkm.jpg",
                       date: "2017/7/23",
                       venue: "AT&T Parkway",

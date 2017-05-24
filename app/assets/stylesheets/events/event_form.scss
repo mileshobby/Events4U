@@ -33,6 +33,7 @@
   margin-bottom: 100px;
 }
 
+
 .new-event-step-1 input:focus, .new-event-step-1 textarea:focus{
   outline: none;
   border: 2px solid black;
@@ -190,4 +191,12 @@
     cursor: pointer;
     background: #efefef;
   }
+}
+
+.green{
+  color: green;
+}
+
+.green-border{
+    border: 4px dashed green !important;
 }

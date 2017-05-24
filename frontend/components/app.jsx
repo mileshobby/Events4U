@@ -22,7 +22,7 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route exact path="/events/:eventId" component={EventDetailContainer} />
       <Route exact path="/new-event" component={EventFormContainer} />
-      <Route path="/browse-events/:category" component={ BrowseEventsContainer } />
+      <Route path="/browse-events/:category/:searchString?" component={ BrowseEventsContainer } />
       <AuthRoute path="/user-events" component={ UserEventsContainer } />
     </div>
     <footer id='main-footer-container'>
