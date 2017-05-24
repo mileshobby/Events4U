@@ -15,6 +15,7 @@ class BrowseEvents extends React.Component{
 
   render(){
     const category = this.props.match.params.category;
+    let search = (this.props.match.params.searchString ? true : false);
     let events = this.props.events.map((event,i)=> (
       <BrowseEventsItem event={event} key={`${event.name}-${event.id}-${i}`}
         bookmarkEvent={this.props.bookmarkEvent}
@@ -34,7 +35,7 @@ class BrowseEvents extends React.Component{
             <EventMap events={this.props.events}/>
           </div>
           <Route path="/browse-events/:category/:searchString?" render={()=>
-              <FilterContainer category={category}/> } />
+              <FilterContainer category={category} search={search}/> } />
         </div>
         <ul className="browse-events-list">
           <h1>Explore Events</h1>

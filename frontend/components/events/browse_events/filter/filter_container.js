@@ -4,7 +4,8 @@ import { fetchFilteredEvents, fetchAllEvents, fetchMatchingEvents }
   from '../../../../actions/event_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  category: ownProps.category
+  category: ownProps.category,
+  search: ownProps.search
 });
 
 const mapDispatchToProps = (dispatch) => ({

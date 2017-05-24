@@ -66,7 +66,7 @@ class Filter extends React.Component{
   }
 
   componentWillReceiveProps(nextProps){
-    if(nextProps.match.params != this.props.match.params){
+    if(this.props.search){
       let category = nextProps.category;
       if(category === 'All'){
         nextProps.fetchAllEvents();

@@ -57,7 +57,7 @@ event2 = Event.create!(title: "Pancakes & Booze Art Show",
                         -FREE Pancake Bar\n
                         -21+ EVENT\n
                         $20 Line Jumper (limited quantities)\n
-                        $10 Door",
+                        $10 Door.",
                       date: "2017/08/27",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487409/pancakes.jpg",
                       venue: "Mezzanine",
@@ -70,7 +70,7 @@ EventCategory.create!(event_id: event2.id, category_id: Music.id)
 EventCategory.create!(event_id: event2.id, category_id: Food.id)
 
 event3 = Event.create!(title: "Outside Lands",
-                      full_description: "The 10th annual Outside Lands Festival will take place in San Francisco’s historic Golden Gate Park August 11 – 13. Festival organizers Another Planet Entertainment, Superfly and Starr Hill have just detailed the lineup for this year’s event which will be headlined by The Who, Metallica and Gorillaz. Lorde, Fleet Foxes, Queens of the Stone Age, alt-J, Solange, A Tribe Called Quest, Little Dragon, Belle and Sebastian, The Avett Brothers, Above & Beyond, Tove Lo, Action Bronson and Thundercat join the headliners at the top of this year’s lineup. Rebelution, Dawes, Real Estate, Temples, Warpaint, Khruangbin, Lee Fields & The Expressions and Lawrence are also among the acts confirmed for Outside Lands ’17. This is going to be a fantastic concert.",
+                      full_description: "The 10th annual Outside Lands Festival will take place in San Francisco’s historic Golden Gate Park August 11 – 13. Festival organizers Another Planet Entertainment, Superfly and Starr Hill have just detailed the lineup for this year’s event which will be headlined by The Who, Metallica and Gorillaz. Lorde, Fleet Foxes, Queens of the Stone Age, alt-J, Solange, A Tribe Called Quest, Little Dragon, Belle and Sebastian, The Avett Brothers, Above & Beyond, Tove Lo, Action Bronson and Thundercat join the headliners at the top of this year’s lineup. Rebelution, Dawes, Real Estate, Temples, Warpaint, Khruangbin, Lee Fields & The Expressions and Lawrence are also among the acts confirmed for Outside Lands ’17. This is going to be a fantastic concert with life changing musical acts.",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487442/outside-lands1_whiddw.jpg",
                       date: "2017/8/11/",
                       price: 500.00,
@@ -83,7 +83,7 @@ EventCategory.create!(event_id: event3.id, category_id:Music.id)
 EventCategory.create!(event_id: event3.id, category_id:Food.id)
 
 event4 = Event.create!(title: "Imagine Dragons Evolve Tour",
-                      full_description: "Evolve (stylized as ƎVOLVE) is the upcoming third studio album by American rock band Imagine Dragons, scheduled to be released on June 23, 2017 through KIDinaKORNER and Interscope Records. The album is the band's new material follow-up to their second studio album, Smoke + Mirrors. After the release of Smoke + Mirrors and its respective world tour, a self-imposed hiatus for 2016 and cryptic messages from the band through their social media gained anticipation for their third album. The album was finally announced on May 9, with the initiation of the album's pre-order. In comparison to Night Visions and Smoke + Mirrors, frontman Dan Reynolds explained that the album will be an 'evolution for Imagine Dragons' This is going to be a fantastic concert.",
+                      full_description: "Evolve (stylized as ƎVOLVE) is the upcoming third studio album by American rock band Imagine Dragons, scheduled to be released on June 23, 2017 through KIDinaKORNER and Interscope Records. The album is the band's new material follow-up to their second studio album, Smoke + Mirrors. After the release of Smoke + Mirrors and its respective world tour, a self-imposed hiatus for 2016 and cryptic messages from the band through their social media gained anticipation for their third album. The album was finally announced on May 9, with the initiation of the album's pre-order. In comparison to Night Visions and Smoke + Mirrors, frontman Dan Reynolds explained that the album will be an 'evolution for Imagine Dragons' This is going to be a fantastic concert. There will be a lot of new music!",
                       image_url: "http://www.amwaycenter.com/assets/img/ImagineDragons_WEB_EventImage-897067549b.jpg",
                       date: "2017/08/11",
                       price: 50.00,
@@ -95,7 +95,7 @@ event4 = Event.create!(title: "Imagine Dragons Evolve Tour",
 EventCategory.create!(event_id: event4.id, category_id:Music.id)
 
 event22 = Event.create!(title: "San Francisco Wine Tasting",
-                      full_description: "One thread weaves through this tasting -- a desire to bring you the best wines.  This tasting is about the breadth of wineries from across the state, an enormous range of varietals, and wine growing appellations from all over the state.  All Family Winemakers tastings focus on wineries that are small (generally under 5000 cases), have limited marketing outreach, and will be represented by family members.  There will be wineries at this event pouring with Family Winemakers for the first time.  It's an opportunity to expand your palate.  You can sample new releases from your classic favorites and from wineries just selling their first vintages.  CHECK out varietals you've never heard of or your best-loved Cabs and Chardonnays.  This well-respected tasting is a once-a-year opportunity to tour and taste California's wine country under one place.",
+                      full_description: "One thread weaves through this tasting -- a desire to bring you the best wines. This tasting is about the breadth of wineries from across the state, an enormous range of varietals, and wine growing appellations from all over the state.  All Family Winemakers tastings focus on wineries that are small (generally under 5000 cases), have limited marketing outreach, and will be represented by family members.  There will be wineries at this event pouring with Family Winemakers for the first time.  It's an opportunity to expand your palate. So many drinks to pick from. You can sample new releases from your classic favorites and from wineries just selling their first vintages.  CHECK out varietals you've never heard of or your best-loved Cabs and Chardonnays.  This well-respected tasting is a once-a-year opportunity to tour and taste California's wine country under one place.",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495488529/tastingslide_gr2jx2.png",
                       date: "2017/8/20",
                       price: 100,
@@ -107,7 +107,7 @@ event22 = Event.create!(title: "San Francisco Wine Tasting",
 EventCategory.create!(event_id: event22.id, category_id: Food.id)
 
 event5 = Event.create!(title: "Bruno Mars: 24K Magic World Tour",
-                      full_description: "The North American leg will follow kicking off July 15 at T-Mobile Arena in Las Vegas and then visit over 45 cities across the U.S. including three stops in Northern California including dates at Golden 1 Center in Sacramento Tuesday, July 18. For complete details, please visit The 24K Magic World Tour official homepage at http://www.brunomars.com. Tickets for The 24K Magic World Tour, produced by Live Nation, go on sale 10am on Monday, November 21. The 24K Magic World Tour celebrates Mars' eagerly anticipated new album, 24K Magic, set to arrive worldwide on Friday, November 18 on Atlantic Records. Pre-orders are available now via the Bruno Mars Official Store, with all pre-orders from the store receiving early access to tickets for The 24K Magic Tour. This is going to be a fantastic concert.",
+                      full_description: "The North American leg will follow kicking off July 15 at T-Mobile Arena in Las Vegas and then visit over 45 cities across the U.S. including three stops in Northern California including dates at Golden 1 Center in Sacramento Tuesday, July 18. For complete details, please visit The 24K Magic World Tour official homepage at http://www.brunomars.com. Tickets for The 24K Magic World Tour, produced by Live Nation, go on sale 10am on Monday, November 21. The 24K Magic World Tour celebrates Mars' eagerly anticipated new album, 24K Magic, set to arrive worldwide on Friday, November 18 on Atlantic Records. Pre-orders are available now via the Bruno Mars Official Store, with all pre-orders from music store receiving early access to tickets for The 24K Magic Tour. This is going to be a fantastic concert.",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495490107/maxresdefault_xt8kli.jpg",
                       date: "2017/6/18/",
                       price: 75.00,
@@ -119,7 +119,7 @@ event5 = Event.create!(title: "Bruno Mars: 24K Magic World Tour",
 EventCategory.create!(event_id: event5.id, category_id:Music.id)
 
 event6 = Event.create!(title: "Ed Sheeran: The Divide World Tour",
-                      full_description: "2017 sees Ed Sheeran taking his blockbuster studio album Divide on tour across North America. The British artist's status as one of the biggest singer-songwriters out at the moment is certainly cemented in this, his third album, which contains the mega-hit singles Shape Of You, and Castle On The Hill. It's seen him topping the charts across the world and infuses his delicate, acoustic pop with even more pronounced R&B flourishes. This is going to be a fantastic concert.",
+                      full_description: "2017 sees Ed Sheeran taking his blockbuster studio album Divide on tour across North America. The British artist's status as one of the biggest singer-songwriters and musical acts out at the moment is certainly cemented in this, his third album, which contains the mega-hit singles Shape Of You, and Castle On The Hill. It's seen him topping the charts across the world and infuses his delicate, acoustic pop with even more pronounced R&B flourishes. This is going to be a fantastic concert.",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487511/sheeran.png",
                       date: "2017/6/18/",
                       price: 35.00,
@@ -131,8 +131,8 @@ event6 = Event.create!(title: "Ed Sheeran: The Divide World Tour",
 EventCategory.create!(event_id: event6.id, category_id:Music.id)
 
 event21 = Event.create!(title: "Eat Drink SF",
-                      full_description: "Eat Drink SF is San Francisco’s premier annual food, wine, and spirits festival that celebrates the Bay Area’s world-class chefs and restaurants.
-Do you dream of caviar bumps and foie gras laybacks? Are you committed to eating your way through the Essential 38? Does a really good meal bring you a deep level of nearly indescribable satisfaction? Fancy yourself a light-weight food critic or devour the musings of the pros? Keep tabs on which kitchen to find the top Bay Area chefs? If you answered yes to any or all of these questions, it sounds like you, friend, are our people. And as our people, there is a good chance that you’ve already attended Eat Drink SF (fka SF Chefs) as the festival is entering its ninth year.",
+                      full_description: "Eat Drink SF is San Francisco’s premier annual food, wine, drinks and spirits festival that celebrates the Bay Area’s world-class chefs and restaurants.
+Do you dream of caviar bumps and foie gras laybacks? Are you committed to eating your way through the Essential 38? Does a really good meal bring you a deep level of nearly indescribable satisfaction? Fancy yourself a light-weight food critic or devour the musings of the pros? Keep tabs on which kitchen to find the top Bay Area chefs? If you answered yes to any or all of these questions, it sounds like you, friend, are our people. And as our people, there is a good chance that you’ve already attended Eat Drink SF (fka SF Chefs) as the festival is entering its ninth year. This is the food festival for you.",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495488268/eatdrinksf.jpg",
                       date: "2017/8/25",
                       venue: "Fort Mason Center",
@@ -145,7 +145,7 @@ EventCategory.create!(event_id: event21.id, category_id: Food.id)
 
 
 event29 = Event.create!(title: "Midnight Cruise WhiteOut",
-                      full_description: "Take a 3 Hour Cruise aboard the Fume Blanc of Commodore Cruises a 4 million dollar, 340 passanger, luxury vessel. It is a Hudson Steamboat Replica with 3 floors, 2 DJs, and amazing views of the Bay Bridge, Golden Gate Bridge, Nob Hill, Alcatraz, and the Spectacular San Francisco Skyline. This season, from Memorial Day Weekend in May to September you'll have the chance to board the Fume Blanc and enjoy an entertaining cruise like none other. Get your tickets now and prepare for an experience you won't forget, but will most likely want to indulge in again. Lots of music and fun in this epic party!",
+                      full_description: "Take a 3 Hour Cruise aboard the Fume Blanc of Commodore Cruises a 4 million dollar, 340 passanger, luxury vessel. It is a Hudson Steamboat Replica with 3 floors, 2 DJs, bumping music, and amazing views of the Bay Bridge, Golden Gate Bridge, Nob Hill, Alcatraz, and the Spectacular San Francisco Skyline. This season, from Memorial Day Weekend in May to September you'll have the chance to board the Fume Blanc and enjoy an entertaining cruise like none other. Get your tickets now and prepare for an experience you won't forget, but will most likely want to indulge in again. Lots of music and fun in this epic party!",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495490783/https_proxy_tnbzjy.jpg",
                       price: 49,
                       date: "2017/8/12",
@@ -157,7 +157,7 @@ EventCategory.create!(event_id: event29.id, category_id: Parties.id)
 
 
 event9 = Event.create!(title: "Fillmore Jazz Festival",
-                      full_description: "From sunup to sundown, visitors can groove to the sounds of live music from multiple stages, browse the offerings of over 12 blocks of fine art and crafts and enjoy gourmet food and beverages. Asian to Cajun, paintings to pottery, old favorites and new directions, the Fillmore Jazz Festival is not to be missed. Lots of music in fun in this great party.",
+                      full_description: "From sunup to sundown, visitors can groove to the sounds of live music from multiple stages, browse the offerings of over 12 blocks of fine art and crafts and enjoy gourmet food and beverages. Asian to Cajun, paintings to pottery, old favorites and new directions, the Fillmore jazz festival is not to be missed. Lots of music in fun in this great party.",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487592/jazz-fest-fillmore_kq9xlw.jpg",
                       date: "2017/7/1",
                       venue: "Filmore District",
@@ -170,7 +170,7 @@ EventCategory.create!(event_id: event9.id, category_id:Music.id)
 EventCategory.create!(event_id: event9.id, category_id:Parties.id)
 
 event10 = Event.create!(title: "San Francisco Shakespeare Fesitval",
-                      full_description: "Local and national playwrights and professional directors, dramaturgs and designers work with the Bay Area’s top actors to engage in an in-depth development process of six new plays. The work leads to two public staged readings of each play.",
+                      full_description: "Local and national playwrights and professional directors, dramaturgs and designers work with the Bay Area’s top actors to engage in an in-depth development process of six new plays. This festival will feature acts such as Romeo and Juliet. The work leads to two public staged readings of each play.",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487627/shakespeare%20festival.jpg",
                       date: "2017/7/25",
                       venue: "San Francisco Shakespeare",
@@ -205,7 +205,7 @@ event12 = Event.create!(title: "Japan Film Festival of San Francisco",
 EventCategory.create!(event_id: event12.id, category_id:Arts.id)
 
 event13 = Event.create!(title: "Fourth of July Waterfront Festival",
-                      full_description: %Q(Dazzling fireworks, local bands, food, arts and crafts ignite this annual waterfront party. Fireworks begin around 9:30 p.m. Dress warmly. This will be a really fun time!),
+                      full_description: %Q(Dazzling fireworks, local bands, food, music, arts and crafts ignite this annual waterfront party. Fireworks begin around 9:30 p.m. Dress warmly. This will be a really fun time!),
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487775/san-fransisco-firework1_btndvp.jpg",
                       date: "2017/7/4",
                       venue: "Pier 39",
@@ -216,7 +216,7 @@ event13 = Event.create!(title: "Fourth of July Waterfront Festival",
 EventCategory.create!(event_id: event13.id, category_id:Parties.id)
 
 event7 = Event.create!(title: "Cazzette Live",
-                      full_description: "SELECT Entertainment welcomes back one of favorite residents, CAZZETTE, to Love + Propaganda on July 21st! The last two shows with Cazzette have sold out and we expect this show to be just as big! Cazzette have built up a solid track record of doing things their own way. With a reputation for topping the Billboard Dance Charts, frequenting Hype Machines top 10 and more than 220m collective streams to their name, the Stockholm-based duo continues to blend genres and burst comfort zones across the board with their highly evolved take on the modern dance music landscape. Opening set by Waev. For table reservations email infoselectsf@gmail.com or call 650.274.5736 21+",
+                      full_description: "SELECT Entertainment welcomes back one of favorite residents, CAZZETTE, to Love + Propaganda on July 21st! The last two shows with Cazzette have sold out and we expect this show to be just as big! Cazzette have built up a solid track record of doing things their own way, making music their own way. With a reputation for topping the Billboard Dance Charts, frequenting Hype Machines top 10 and more than 220m collective streams to their name, the Stockholm-based duo continues to blend genres and burst comfort zones across the board with their highly evolved take on the modern dance music landscape. Opening set by Waev. For table reservations email infoselectsf@gmail.com or call 650.274.5736 21+",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487538/cazzette.jpg",
                       date: "2017/6/21",
                       price: 35.00,
@@ -240,7 +240,7 @@ event14 = Event.create!(title: "Giants vs. Marlins",
 EventCategory.create!(event_id: event14.id, category_id:Sports.id)
 
 event15 = Event.create!(title: "49ers vs. Panthers",
-                      full_description: %Q(Come out to opening night, when the San Francisco 49ers take on the Carolina Panthers.),
+                      full_description: %Q(Come out to opening night, when the San Francisco 49ers take on the Carolina Panthers. This sports game is not one to miss for football fans.),
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487814/49ers-web-sized1_ewy1st.jpg",
                       date: "2017/9/10",
                       venue: "Levi Stadium",
@@ -252,7 +252,7 @@ event15 = Event.create!(title: "49ers vs. Panthers",
 EventCategory.create!(event_id: event15.id, category_id:Sports.id)
 
 event8 = Event.create!(title: "Chocolate and Art Show",
-                      full_description: "We would like to cordially invite you to Chocolate and Art Show San Francisco, Thursday June 22th, and Friday June 23th. Indulge yourself in some of SF's finest up-and-coming artists, photographers and creators! There is something for every body including live body painting, vendors, live music, face-painting, and free chocolate!",
+                      full_description: "We would like to cordially invite you to Chocolate and Art Show San Francisco, Thursday June 22th, and Friday June 23th. Indulge yourself in some of SF's finest up-and-coming artists, photographers and creators! There is something for every body including live body painting, vendors, live music, food, art, face-painting, and free chocolate!",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487564/chocolate.jpg",
                       date: "2017/6/23",
                       price: 10.00,
@@ -265,7 +265,7 @@ EventCategory.create!(event_id: event8.id, category_id:Arts.id)
 EventCategory.create!(event_id: event8.id, category_id:Food.id)
 
 event16 = Event.create!(title: "The Design Gurus Summit",
-                      full_description: %Q(Come learn from top Silicon Valley designers, thinkers and thought leaders who will share their insights on topics including product design, user experience design, design for emerging platforms, branding, marketing, creativity, entrepreneurship, design-driven startups, creative inspiration, and more.
+                      full_description: %Q(Come learn from top Silicon Valley designers, thinkers and thought leaders who will share their insights on topics including tech, product design, user experience design,  design for emerging platforms, branding, marketing, creativity, entrepreneurship, design-driven startups, creative inspiration, and more.
                       A full-day event of both keynotes and panels from 8:30 am to 5:00 pm. This year we have upgraded to the beautiful Kanbar Hall at the San Francisco Jewish Community Center. This is a world-class facility with a true stage and a professional audio visual team.),
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487833/dgslogo_r0myee.png",
                       date: "2017/9/19",
@@ -290,7 +290,7 @@ event17 = Event.create!(title: "2017 CRE // Tech Intersect San Francisco",
 EventCategory.create!(event_id: event17.id, category_id:Business.id)
 
 event18 = Event.create!(title: "AI & The Future of Privacy",
-                      full_description: %Q(Join us for this 3-night after work series to learn how to create! respectful, accessible, and secure experiences for the technology of the future. We've been meeting with AI engineers, hardware developers, security experts, hackers, and designers to assemble our program. Stay tuned as we add to our lineup. ),
+                      full_description: %Q(Join us for this 3-night after work series to learn how to create respectful, accessible, and secure experiences for the technology of the future. We've been meeting with AI engineers, hardware developers, security experts, hackers, and designers to assemble our program. Stay tuned as we add to our lineup. This could be a life changing seminar.),
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487899/ai.png",
                       date: "2017/7/10",
                       venue: "Galvanize",
@@ -317,7 +317,7 @@ Industries represented at our Career Fairs: Sales, Inside Sales, Outside Sales, 
 EventCategory.create!(event_id: event19.id, category_id:Business.id)
 
 event20 = Event.create!(title: "The Renegade Craft Fair",
-                      full_description: "The best makers of handmade goods from the Bay Area and beyond assemble for this free-to-attend marketplace for indie-craft culture, featuring interactive workshops.",
+                      full_description: "The best makers of handmade goods from the Bay Area and beyond assemble for this free-to-attend marketplace for indie-craft culture, featuring interactive workshops. Come to this festival and be sure to bring other art lovers! ",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487968/facebook_logo_okxao6.png",
                       date: "2017/7/15",
                       venue: "Fort Mason Center",
@@ -366,7 +366,7 @@ EventCategory.create!(event_id: event25.id, category_id: Classes.id)
 EventCategory.create!(event_id: event25.id, category_id: Sports.id)
 
 event26 = Event.create!(title: "Summer Of Love Dance Party",
-                      full_description: "What’s more counterculture than a dance party in a gothic cathedral? Come to Grace Cathedral to celebrate the 50th anniversary of the Summer of Love by dancing in the aisles to classics from 1967 and modern tunes inspired by the artistic spirit of that era—courtesy of the Make It Funky DJs and Mad Alchemy’s liquid light show. Be sure to wear flowers in your hair!",
+                      full_description: "What’s more counterculture than a dance party in a gothic cathedral? Come to Grace Cathedral to celebrate the 50th anniversary of the Summer of Love by dancing in the aisles to classics from 1967 and modern tunes inspired by the artistic spirit of that era—courtesy of the Make It Funky DJs and Mad Alchemy’s liquid light show. Be sure to wear flowers in your hair and get ready to enjoy the sweet music!",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495490559/catehdral.jpg",
                       date: "2017/7/22",
                       venue: "Grace Cathedral",
@@ -402,7 +402,7 @@ event28 = Event.create!(title: "ArtSpan Artist Mixer",
 EventCategory.create!(event_id: event28.id, category_id: Arts.id)
 
 event32 = Event.create!(title: "Classic Hip-Hop Night",
-                      full_description: "MY MELODY classic hip-hop night with DJ Dave Paul at Public Works. All your favorite old school & golden era rap songs from the twenty year period of 1979-1999. ",
+                      full_description: "MY MELODY classic hip-hop night with DJ Dave Paul at Public Works. All your favorite old school & golden era rap songs from the twenty year period of 1979-1999 musical era. ",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495492320/https_3A_2F_2Fcdn.evbuc.com_2Fimages_2F31293101_2F7350857313_2F1_2Foriginal_qbbcio.jpg",
                       date: "2017/7/25",
                       venue: "Public Works",
