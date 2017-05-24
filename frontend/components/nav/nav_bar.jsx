@@ -60,8 +60,10 @@ class NavBar extends React.Component{
                   this.loggedInLinks() : this.loggedOutLinks());
     return(
       <nav id='main-nav'>
-        <div className="logo"><Link to="/">Events4U</Link></div>
-        <SearchBar/>
+        <div id='left-nav'>
+          <div className="logo"><Link to="/">Events4U</Link></div>
+          <SearchBar/>
+        </div>
         {navLinks}
       </nav>
     );

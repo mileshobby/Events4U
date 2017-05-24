@@ -23,7 +23,7 @@ class BrowseEvents extends React.Component{
         />
   ));
     if (events.length === 0){
-      events = <div id="empty-search-results">Sorry! We could not find any events matching your input. We are still
+      events = <div id="empty-search-results">Sorry! We could not find any events matching "{this.props.match.params.searchString}". We are still
                     a growing web service with a limited number of events. Try some popular searches, like...
                     <b>concert</b>, <b>festival</b>, or <b>game</b>! </div>;
     }
@@ -33,7 +33,8 @@ class BrowseEvents extends React.Component{
           <div className="google-map-box">
             <EventMap events={this.props.events}/>
           </div>
-          <FilterContainer category={category}/>
+          <Route path="/browse-events/:category/:searchString?" render={()=>
+              <FilterContainer category={category}/> } />
         </div>
         <ul className="browse-events-list">
           <h1>Explore Events</h1>

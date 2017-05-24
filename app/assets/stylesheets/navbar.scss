@@ -11,6 +11,12 @@
   padding-right: 20px;
 }
 
+#left-nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .logo{
   margin: 0px 15px;
   padding: 16px;
