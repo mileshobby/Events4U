@@ -24,7 +24,7 @@ The above image depicts images which allow users to view events filtered by thei
 
 ### Tickets && Bookmarks
 
-Both Bookmarks and Tickets are defined by a join table between users and events. When a user buys or bookmarks an event, a new row in the respective table is created. Upon mounting of the "my events" component, 
+Both Bookmarks and Tickets are defined by a join table between users and events. When a user buys or bookmarks an event, a new row in the respective table is created. Upon mounting of the "my events" component,
 
 ### Search
 
@@ -60,3 +60,7 @@ While currently, events are tagged with categories, it would make sense to allow
 ### Calendar
 
 I would also like to add a calendar page in order to view events by date, for both their own events and for all events.
+
+### Cross-Browser/Mobile Compatibility
+
+This web application was developed in about a week, and due to these constraints was mainly built for use on laptop's using Chrome. With more time, I would like to optimize the app for viewing on mobile devices or other browsers, like Safari and Firefox.
