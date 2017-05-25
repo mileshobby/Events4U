@@ -1,0 +1,27 @@
+EventRecommendationEngine
+
+Algorithm: collaborative filtering
+
+two ways: by in common events of two diff users or by similarity of events of single user
+
+User1 = 1
+User2 = 2
+Tickets = T
+Saved Events = S
+
+((T1) intersecion (T2) / () )
+
+Jaccard Similarity Index:
+
+((num unique events that BOTH users purchased or saved) / (total num unique events that EITHER user purchased or saved)
+
+
+num all unique events:
+
+current_user_events = Set.new (current_user.purchased_events.concat(User1.bookmarked_events).unique)
+other_user_events = Set.new (other_user.purchased_events.concat(User2.bookmarked_events).unique)
+
+events_intersection = other_user.intersection other_user
+events_union = other_user.union other_user_events
+
+------------------------------------------------------------------------

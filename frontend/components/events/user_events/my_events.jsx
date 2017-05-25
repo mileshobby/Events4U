@@ -17,15 +17,13 @@ class MyEvents extends React.Component{
                 hosted={this.props.hosted}
                 deleteEvent={this.props.deleteEvent}
                 loggedIn="true"/>
-            </li>;
-    });
+            </li>;});
     return(
       <ul id="my-events-list">
         {events}
       </ul>
     );
   }
-
 }
 
 export default MyEvents;

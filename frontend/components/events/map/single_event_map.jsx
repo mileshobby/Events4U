@@ -35,6 +35,10 @@ class SingleEventMap extends React.Component{
       this.map.setCenter({lat: lat, lng: lng});
       window.scrollTo(0,0);
       $(document.body).css({'cursor' : 'wait'});
+      setTimeout(()=>{
+        $(document.body).css({'cursor' : 'default'});
+        this.loaded = true;
+      }, 5000);
       navigator.geolocation.getCurrentPosition( (startPos) => {
         const originLat = startPos.coords.latitude;
         const originLng = startPos.coords.longitude;

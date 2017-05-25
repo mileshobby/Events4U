@@ -1,3 +1,5 @@
+require 'set'
+
 class Api::EventsController < ApplicationController
 
   def index
@@ -111,6 +113,26 @@ class Api::EventsController < ApplicationController
       @bookmarked_events = []
     end
     render :index
+  end
+
+  def recommended events
+    #find top 3 recommended events for a user
+    if current_user
+      #change to current user
+      User.all do |other_user|
+        next if other_user == current_user
+
+        current_user_events = Set.new (current_user.purchased_events.concat(current_user.bookmarked_events).unique)
+        other_user_events = Set.new (other_user.purchased_events.concat(current_user.bookmarked_events).unique)
+
+        events_intersection = current_user_events.intersection other_user
+        events_union = current_user_events.union other_user_events
+
+        jaccard_index = (events_intersection*1.0)/events_union
+      end
+    else
+      render json: {}
+    end
   end
 
   private
