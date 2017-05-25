@@ -115,21 +115,57 @@ class Api::EventsController < ApplicationController
     render :index
   end
 
-  def recommended events
+  def recommended_events
     #find top 3 recommended events for a user
     if current_user
-      #change to current user
-      User.all do |other_user|
+      #compare all users to current user and find the most similar ones
+      #set of all events associated with current_user
+      current_user_events = current_user.purchased_events.to_a.concat(current_user.bookmarked_events.to_a).to_a.uniq
+      similarity_scores = []
+      @all_users = User.includes(:bookmarked_events, :purchased_events).all.to_a
+      @all_users.each do |other_user|
         next if other_user == current_user
+        #set of all events associated with other user
+        other_user_events = (other_user.purchased_events).to_a.concat(other_user.bookmarked_events.to_a).uniq
+        events_intersection = current_user_events & other_user_events
+        events_union = current_user_events | other_user_events
+        if events_intersection.count > 0
+          jaccard_index = (events_intersection.count*1.0)/events_union.count
+        else
+          next
+        end
 
-        current_user_events = Set.new (current_user.purchased_events.concat(current_user.bookmarked_events).unique)
-        other_user_events = Set.new (other_user.purchased_events.concat(current_user.bookmarked_events).unique)
-
-        events_intersection = current_user_events.intersection other_user
-        events_union = current_user_events.union other_user_events
-
-        jaccard_index = (events_intersection*1.0)/events_union
+        similarity_scores.push([jaccard_index, other_user])
       end
+
+      #sort by highest jaccard index (most similar user)
+      similarity_scores = similarity_scores.sort_by{|score| score[0]}.reverse!
+
+      #look through most similar users and try to find 3 events in other_user that
+      #current_user has not saved or purchased
+      recommended_events = []
+      similar_users = similarity_scores.map { |score| score[1] }
+      similar_users.each do |user|
+        other_user_events = (user.purchased_events).to_a.concat(user.bookmarked_events.to_a).uniq
+        #set difference
+        new_events = other_user_events - current_user_events
+        new_events.each do |event|
+          recommended_events.push(event)
+          break if recommended_events.count == 3
+        end
+        break if recommended_events.count == 3
+      end
+
+      #if we still haven't found 3 events, place 3 random new events in recommendations
+      num_events_needed = 3 - recommended_events.count
+      if num_events_needed > 0
+        events = Event.where('id NOT in (?)', current_user_events).to_a.sample(num_events_needed)
+        recommended_events.push(events)
+      end
+
+      @events = recommended_events
+      @bookmarked_events = current_user.bookmarked_events
+      render :index
     else
       render json: {}
     end

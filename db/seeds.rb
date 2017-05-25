@@ -11,7 +11,7 @@ User.destroy_all
 
 GuestUser = User.create!(username: "GuestUser", password: "password")
 
-
+#HOSTS
 MilesHobby = User.create!(username: "MilesHobby", password: "password")
 SeanPerfecto = User.create!(username: "SeanPerfecto", password: "password")
 JustinJackson = User.create!(username: "JJackson", password: "password")
@@ -20,6 +20,13 @@ TechCompanySF = User.create!(username: "TechCompanySF", password: "password")
 PartyPeople = User.create!(username: "PartyPeople", password: "password")
 ArtSF = User.create!(username: "ArtSF", password: "password")
 BigSportsBrand = User.create!(username: "BigSportsBrand", password: "password")
+
+TurntUser = User.create!(username: "HellaTurnt", password: "password")
+ArtyGuy = User.create!(username: "Arty", password: "password")
+TheProfess = User.create!(username: "TheProfess", password: "password")
+SportyGuy = User.create!(username: "SportyGuy", password: "password")
+MusicLover = User.create!(username: "MusicLover", password: "password")
+ILoveFood = User.create!(username: "iLoveFood", password: "password")
 
 Category.destroy_all
 
@@ -48,6 +55,8 @@ event22 = Event.create!(title: "San Francisco Wine Tasting",
                       host_id: MilesHobby.id)
 
 EventCategory.create!(event_id: event22.id, category_id: Food.id)
+Ticket.create!(user_id: TheProfess.id, event_id: event22.id)
+Ticket.create!(user_id: ILoveFood.id, event_id: event22.id)
 
 
 event2 = Event.create!(title: "Pancakes & Booze Art Show",
@@ -70,6 +79,8 @@ event2 = Event.create!(title: "Pancakes & Booze Art Show",
 EventCategory.create!(event_id: event2.id, category_id: Parties.id)
 EventCategory.create!(event_id: event2.id, category_id: Music.id)
 EventCategory.create!(event_id: event2.id, category_id: Food.id)
+Ticket.create!(user_id: ArtyGuy.id, event_id: event2.id)
+Ticket.create!(user_id: ILoveFood.id, event_id: event2.id)
 
 event3 = Event.create!(title: "Outside Lands",
                       full_description: "The 10th annual Outside Lands Festival will take place in San Francisco’s historic Golden Gate Park August 11 – 13. Festival organizers Another Planet Entertainment, Superfly and Starr Hill have just detailed the lineup for this year’s event which will be headlined by The Who, Metallica and Gorillaz. Lorde, Fleet Foxes, Queens of the Stone Age, alt-J, Solange, A Tribe Called Quest, Little Dragon, Belle and Sebastian, The Avett Brothers, Above & Beyond, Tove Lo, Action Bronson and Thundercat join the headliners at the top of this year’s lineup. Rebelution, Dawes, Real Estate, Temples, Warpaint, Khruangbin, Lee Fields & The Expressions and Lawrence are also among the acts confirmed for Outside Lands ’17. This is going to be a fantastic concert with life changing musical acts.",
@@ -83,6 +94,8 @@ event3 = Event.create!(title: "Outside Lands",
 
 EventCategory.create!(event_id: event3.id, category_id:Music.id)
 EventCategory.create!(event_id: event3.id, category_id:Food.id)
+Ticket.create!(user_id: TurntUser.id, event_id: event3.id)
+Ticket.create!(user_id: MusicLover.id, event_id: event3.id)
 
 event4 = Event.create!(title: "Imagine Dragons Evolve Tour",
                       full_description: "Evolve (stylized as ƎVOLVE) is the upcoming third studio album by American rock band Imagine Dragons, scheduled to be released on June 23, 2017 through KIDinaKORNER and Interscope Records. The album is the band's new material follow-up to their second studio album, Smoke + Mirrors. After the release of Smoke + Mirrors and its respective world tour, a self-imposed hiatus for 2016 and cryptic messages from the band through their social media gained anticipation for their third album. The album was finally announced on May 9, with the initiation of the album's pre-order. In comparison to Night Visions and Smoke + Mirrors, frontman Dan Reynolds explained that the album will be an 'evolution for Imagine Dragons' This is going to be a fantastic concert. There will be a lot of new music!",
@@ -95,6 +108,7 @@ event4 = Event.create!(title: "Imagine Dragons Evolve Tour",
                       host_id: Insomniac.id)
 
 EventCategory.create!(event_id: event4.id, category_id:Music.id)
+Ticket.create!(user_id: MusicLover.id, event_id: event4.id)
 
 event1 = Event.create!(title: "Warriors vs. Cavs NBA Finals Game 7",
                       full_description: "Watch as Steph Curry takes on Lebron James in the epic ending to a trilogy. This sports event is a can't miss for basketball fans.",
@@ -107,6 +121,8 @@ event1 = Event.create!(title: "Warriors vs. Cavs NBA Finals Game 7",
                       host_id: User.find_by(username: "SeanPerfecto").id)
 
 EventCategory.create!(event_id: event1.id, category_id: Sports.id)
+Ticket.create!(user_id: TurntUser.id, event_id: event1.id)
+Bookmark.create!(user_id: SportyGuy.id, event_id: event1.id)
 
 event5 = Event.create!(title: "Bruno Mars: 24K Magic World Tour",
                       full_description: "The North American leg will follow kicking off July 15 at T-Mobile Arena in Las Vegas and then visit over 45 cities across the U.S. including three stops in Northern California including dates at Golden 1 Center in Sacramento Tuesday, July 18. For complete details, please visit The 24K Magic World Tour official homepage at https://www.brunomars.com. Tickets for The 24K Magic World Tour, produced by Live Nation, go on sale 10am on Monday, November 21. The 24K Magic World Tour celebrates Mars' eagerly anticipated new album, 24K Magic, set to arrive worldwide on Friday, November 18 on Atlantic Records. Pre-orders are available now via the Bruno Mars Official Store, with all pre-orders from music store receiving early access to tickets for The 24K Magic Tour. This is going to be a fantastic concert.",
@@ -119,6 +135,7 @@ event5 = Event.create!(title: "Bruno Mars: 24K Magic World Tour",
                       host_id: Insomniac.id)
 
 EventCategory.create!(event_id: event5.id, category_id:Music.id)
+Ticket.create!(user_id: MusicLover.id, event_id: event5.id)
 
 event6 = Event.create!(title: "Ed Sheeran: The Divide World Tour",
                       full_description: "2017 sees Ed Sheeran taking his blockbuster studio album Divide on tour across North America. The British artist's status as one of the biggest singer-songwriters and musical acts out at the moment is certainly cemented in this, his third album, which contains the mega-hit singles Shape Of You, and Castle On The Hill. It's seen him topping the charts across the world and infuses his delicate, acoustic pop with even more pronounced R&B flourishes. This is going to be a fantastic concert.",
@@ -131,6 +148,8 @@ event6 = Event.create!(title: "Ed Sheeran: The Divide World Tour",
                       host_id: Insomniac.id)
 
 EventCategory.create!(event_id: event6.id, category_id:Music.id)
+Ticket.create!(user_id: TheProfess.id, event_id: event6.id)
+Ticket.create!(user_id: MusicLover.id, event_id: event6.id)
 
 event21 = Event.create!(title: "Eat Drink SF",
                       full_description: "Eat Drink SF is San Francisco’s premier annual food, wine, drinks and spirits festival that celebrates the Bay Area’s world-class chefs and restaurants.
@@ -143,6 +162,9 @@ Do you dream of caviar bumps and foie gras laybacks? Are you committed to eating
                       host_id: PartyPeople.id)
 
 EventCategory.create!(event_id: event21.id, category_id: Food.id)
+Ticket.create!(user_id: ArtyGuy.id, event_id: event21.id)
+Ticket.create!(user_id: MusicLover.id, event_id: event21.id)
+Ticket.create!(user_id: ILoveFood.id, event_id: event21.id)
 
 
 
@@ -156,6 +178,8 @@ event29 = Event.create!(title: "Midnight Cruise WhiteOut",
                       city_state_zip: "San Francisco, CA 94107",
                       host_id: PartyPeople.id)
 EventCategory.create!(event_id: event29.id, category_id: Parties.id)
+Ticket.create!(user_id: TurntUser.id, event_id: event29.id)
+Ticket.create!(user_id: MusicLover.id, event_id: event29.id)
 
 
 event9 = Event.create!(title: "Fillmore Jazz Festival",
@@ -170,6 +194,8 @@ event9 = Event.create!(title: "Fillmore Jazz Festival",
 
 EventCategory.create!(event_id: event9.id, category_id:Music.id)
 EventCategory.create!(event_id: event9.id, category_id:Parties.id)
+Ticket.create!(user_id: TurntUser.id, event_id: event9.id)
+Ticket.create!(user_id: MusicLover.id, event_id: event9.id)
 
 event10 = Event.create!(title: "San Francisco Shakespeare Fesitval",
                       full_description: "Local and national playwrights and professional directors, dramaturgs and designers work with the Bay Area’s top actors to engage in an in-depth development process of six new plays. This festival will feature acts such as Romeo and Juliet. The work leads to two public staged readings of each play.",
@@ -206,6 +232,7 @@ event13 = Event.create!(title: "Fourth of July Waterfront Festival",
                       host_id: User.find_by(username: "SeanPerfecto").id)
 
 EventCategory.create!(event_id: event13.id, category_id:Parties.id)
+Ticket.create!(user_id: TurntUser.id, event_id: event13.id)
 
 event7 = Event.create!(title: "Cazzette Live",
                       full_description: "SELECT Entertainment welcomes back one of favorite residents, CAZZETTE, to Love + Propaganda on July 21st! The last two shows with Cazzette have sold out and we expect this show to be just as big! Cazzette have built up a solid track record of doing things their own way, making music their own way. With a reputation for topping the Billboard Dance Charts, frequenting Hype Machines top 10 and more than 220m collective streams to their name, the Stockholm-based duo continues to blend genres and burst comfort zones across the board with their highly evolved take on the modern dance music landscape. Opening set by Waev. For table reservations email infoselectsf@gmail.com or call 650.274.5736 21+",
@@ -218,6 +245,8 @@ event7 = Event.create!(title: "Cazzette Live",
                       host_id: Insomniac.id)
 
 EventCategory.create!(event_id: event7.id, category_id:Music.id)
+Ticket.create!(user_id: TurntUser.id, event_id: event7.id)
+Ticket.create!(user_id: MusicLover.id, event_id: event7.id)
 
 event14 = Event.create!(title: "Giants vs. Marlins",
                       full_description: %Q(The San Francisco Giants take on the Miami Marlins in this MLB matchup at AT&T Park. This sports event is a can't miss for baseball fans.),
@@ -230,6 +259,7 @@ event14 = Event.create!(title: "Giants vs. Marlins",
                       host_id: BigSportsBrand.id)
 
 EventCategory.create!(event_id: event14.id, category_id:Sports.id)
+Bookmark.create!(user_id: SportyGuy.id, event_id: event14.id)
 
 event15 = Event.create!(title: "49ers vs. Panthers",
                       full_description: %Q(Come out to opening night, when the San Francisco 49ers take on the Carolina Panthers. This sports game is not one to miss for football fans.),
@@ -242,6 +272,7 @@ event15 = Event.create!(title: "49ers vs. Panthers",
                       host_id: Insomniac.id)
 
 EventCategory.create!(event_id: event15.id, category_id:Sports.id)
+Bookmark.create!(user_id: SportyGuy.id, event_id: event15.id)
 
 
 event16 = Event.create!(title: "The Design Gurus Summit",
@@ -256,6 +287,8 @@ event16 = Event.create!(title: "The Design Gurus Summit",
                       host_id: User.find_by(username: "GuestUser").id)
 
 EventCategory.create!(event_id: event16.id, category_id:Business.id)
+Ticket.create!(user_id: ArtyGuy.id, event_id: event16.id)
+Ticket.create!(user_id: TheProfess.id, event_id: event16.id)
 
 event17 = Event.create!(title: "2017 CRE // Tech Intersect San Francisco",
                       full_description: %Q(CRE// Tech is the center of innovation for the commercial real estate industry. We are committed to bringing innovation and connectivity to the commercial real estate and technology sectors.),
@@ -268,6 +301,7 @@ event17 = Event.create!(title: "2017 CRE // Tech Intersect San Francisco",
                       host_id: TechCompanySF.id)
 
 EventCategory.create!(event_id: event17.id, category_id:Business.id)
+Ticket.create!(user_id: TheProfess.id, event_id: event17.id)
 
 event18 = Event.create!(title: "AI & The Future of Privacy",
                       full_description: %Q(Join us for this 3-night after work series to learn how to create respectful, accessible, and secure experiences for the technology of the future. We've been meeting with AI engineers, hardware developers, security experts, hackers, and designers to assemble our program. Stay tuned as we add to our lineup. This could be a life changing seminar.),
@@ -281,6 +315,7 @@ event18 = Event.create!(title: "AI & The Future of Privacy",
 
 EventCategory.create!(event_id: event18.id, category_id:Business.id)
 EventCategory.create!(event_id: event18.id, category_id:Classes.id)
+Ticket.create!(user_id: TheProfess.id, event_id: event18.id)
 
 event19 = Event.create!(title: "San Francisco Career Fair & Job Fair",
                       full_description: %Q(The 18th Annual San Francisco Career Fair - Sales & Professional Job Fair
@@ -295,6 +330,7 @@ Industries represented at our Career Fairs: Sales, Inside Sales, Outside Sales, 
                       host_id: TechCompanySF.id)
 
 EventCategory.create!(event_id: event19.id, category_id:Business.id)
+Ticket.create!(user_id: TheProfess.id, event_id: event19.id)
 
 event20 = Event.create!(title: "The Renegade Craft Fair",
                       full_description: "The best makers of handmade goods from the Bay Area and beyond assemble for this free-to-attend marketplace for indie-craft culture, featuring interactive workshops. Come to this festival and be sure to bring other art lovers! ",
@@ -306,6 +342,7 @@ event20 = Event.create!(title: "The Renegade Craft Fair",
                       host_id: MilesHobby.id)
 
 EventCategory.create!(event_id: event20.id, category_id:Arts.id)
+Ticket.create!(user_id: ArtyGuy.id, event_id: event20.id)
 
 
 event23 = Event.create!(title: "App Academy Web Development Intensive Bootcamp",
@@ -331,6 +368,7 @@ event24 = Event.create!(title: "Galvanize Data Science Full Time Program",
                       host_id: TechCompanySF.id)
 
 EventCategory.create!(event_id: event24.id, category_id: Classes.id)
+Ticket.create!(user_id: TheProfess.id, event_id: event24.id)
 
 event25 = Event.create!(title: "Sunrise Yoga on the Beach",
                       full_description: "Hatha is a potent alignment-oriented practice that emphasizes the forms and actions within yoga postures. This class is based on physical postures (asanas), deep breathing, mindfulness and listening to the body.",
@@ -344,6 +382,7 @@ event25 = Event.create!(title: "Sunrise Yoga on the Beach",
 
 EventCategory.create!(event_id: event25.id, category_id: Classes.id)
 EventCategory.create!(event_id: event25.id, category_id: Sports.id)
+Bookmark.create!(user_id: SportyGuy.id, event_id: event25.id)
 
 event26 = Event.create!(title: "Summer Of Love Dance Party",
                       full_description: "What’s more counterculture than a dance party in a gothic cathedral? Come to Grace Cathedral to celebrate the 50th anniversary of the Summer of Love by dancing in the aisles to classics from 1967 and modern tunes inspired by the artistic spirit of that era—courtesy of the Make It Funky DJs and Mad Alchemy’s liquid light show. Be sure to wear flowers in your hair and get ready to enjoy the sweet music!",
@@ -356,6 +395,9 @@ event26 = Event.create!(title: "Summer Of Love Dance Party",
                       host_id: GuestUser.id)
 
 EventCategory.create!(event_id: event26.id, category_id: Parties.id)
+Bookmark.create!(user_id: TurntUser.id, event_id: event26.id)
+Ticket.create!(user_id: ArtyGuy.id, event_id: event26.id)
+Ticket.create!(user_id: MusicLover.id, event_id: event26.id)
 
 event8 = Event.create!(title: "Chocolate and Art Show",
                       full_description: "We would like to cordially invite you to Chocolate and Art Show San Francisco, Thursday June 22th, and Friday June 23th. Indulge yourself in some of SF's finest up-and-coming artists, photographers and creators! There is something for every body including live body painting, vendors, live music, food, art, face-painting, and free chocolate!",
@@ -369,6 +411,8 @@ event8 = Event.create!(title: "Chocolate and Art Show",
 
 EventCategory.create!(event_id: event8.id, category_id:Arts.id)
 EventCategory.create!(event_id: event8.id, category_id:Food.id)
+Bookmark.create!(user_id: ArtyGuy.id, event_id: event8.id)
+Ticket.create!(user_id: ILoveFood.id, event_id: event8.id)
 
 event27 = Event.create!(title: "Dimensions: An Immersive Digital Art Exhibition",
                       full_description: "Mirus Gallery is proud to present itʼs first digital art exhibition featuring a collection of projection mapped environments, VR worlds, 3D printed pieces, and a series of curated still art work brought to you by the leaders in immersive experiences.",
@@ -380,6 +424,7 @@ event27 = Event.create!(title: "Dimensions: An Immersive Digital Art Exhibition"
                       host_id: ArtSF.id)
 
 EventCategory.create!(event_id: event27.id, category_id: Arts.id)
+Bookmark.create!(user_id: ArtyGuy.id, event_id: event27.id)
 
 event12 = Event.create!(title: "Japan Film Festival of San Francisco",
                       full_description: %Q(Japan Film Festival of San Francisco is the first and only fully dedicated annual Japanese film event in the San Francisco Bay Area. Showcasing the latest in anime, live-action and documentaries straight from Japan, this week-long festival will take place in San Francisco's historic Japantown.),
@@ -392,6 +437,7 @@ event12 = Event.create!(title: "Japan Film Festival of San Francisco",
                       host_id: User.find_by(username: "GuestUser").id)
 
 EventCategory.create!(event_id: event12.id, category_id:Arts.id)
+Bookmark.create!(user_id: ArtyGuy.id, event_id: event12.id)
 
 event28 = Event.create!(title: "ArtSpan Artist Mixer",
                       full_description: "Mix, Mingle, and Make! Meet artists and art enthusiasts, check out the letterpress print studio and try your hand at pulling letterpress prints using wood type!
@@ -416,6 +462,8 @@ event32 = Event.create!(title: "Classic Hip-Hop Night",
                       host_id: PartyPeople.id)
 
 EventCategory.create!(event_id: event32.id, category_id: Arts.id)
+Bookmark.create!(user_id: TurntUser.id, event_id: event32.id)
+Bookmark.create!(user_id: SportyGuy.id, event_id: event32.id)
 
 event33 = Event.create!(title: "Oakland Raiders vs. New England Patriots",
                       full_description: "Watch the Oakland Raiders take on the New England patriots in this epic sports match up. This will be a great day for football fans in the Bay Area as the defending champs come to Oakland for a huge game.",
@@ -428,6 +476,8 @@ event33 = Event.create!(title: "Oakland Raiders vs. New England Patriots",
                       host_id: BigSportsBrand.id)
 
 EventCategory.create!(event_id: event33.id, category_id: Sports.id)
+Bookmark.create!(user_id: TurntUser.id, event_id: event33.id)
+Bookmark.create!(user_id: SportyGuy.id, event_id: event33.id)
 
 event34 = Event.create!(title: "SF Kite Festival",
                       full_description: "Bring your kites to the SF kite festival, where people of all ages are welcome! There will be food, drink, and lots of good times. If you are looking for some family fun, this is the place to come!",
@@ -452,6 +502,8 @@ city_state_zip: "San Francisco, CA 94111",
 host_id: BigSportsBrand.id)
 
 EventCategory.create!(event_id: event34.id, category_id: Sports.id)
+Bookmark.create!(user_id: SportyGuy.id, event_id: event35.id)
+Ticket.create!(user_id: ILoveFood.id, event_id: event35.id)
 
 event36 = Event.create!(title: "Dog Training Classes",
 full_description: "I am offering dog training classes. I will get your dogs into shape! I will also considering accepting other pets, such as lizards, cats, or parrots into my pet academy.",
@@ -466,9 +518,9 @@ host_id: SeanPerfecto.id)
 EventCategory.create!(event_id: event36.id, category_id: Classes.id)
 
 event37 = Event.create!(title: "Dream League 2017 Basketball Tournament",
-full_description: "$55 for individuals, $440 for teams, then also each team is responsible for $35 cash game fee paid to ref/scorekeeper at the gym, prior to each tipoff. DETAILS: https://www.drmlg.org/leagues/sundays/
+full_description: "$55 for individuals, $440 for each basketball teams, then also each team is responsible for $35 cash game fee paid to ref/scorekeeper at the gym, prior to each tipoff. DETAILS: https://www.drmlg.org/leagues/sundays/
 Signup and pay your spot in full by Mon 1/16 and get 25% OFF NIKE!!",
-image_url: "https://res.cloudinary.com/events4u/image/upload/v1495670051/training3_kmq1r0.jpg",
+image_url: "http://res.cloudinary.com/events4u/image/upload/v1495747364/Jamboree_20Jerseys_Home_20Page_20Hero_20_281_29_frzs3v.jpg",
 date: "2017/12/1",
 venue: "Gateway High School",
 price: 55,
@@ -477,6 +529,7 @@ city_state_zip: "San Francisco, CA 94133",
 host_id: BigSportsBrand.id)
 
 EventCategory.create!(event_id: event37.id, category_id: Sports.id)
+Bookmark.create!(user_id: SportyGuy.id, event_id: event37.id)
 
 #EVENT_CATEGORY_SEEDS
 Bookmark.create!(user_id: GuestUser.id, event_id: event1.id)
