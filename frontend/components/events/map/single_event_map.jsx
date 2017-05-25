@@ -5,10 +5,12 @@ import values from 'lodash/values';
 class SingleEventMap extends React.Component{
   constructor(props){
     super(props);
+    this.loaded = false;
   }
 
   componentWillReceiveProps(nextProps) {
     if(!nextProps.event) return;
+    if(this.loaded) return;
     let {title, street_address, city_state_zip} = nextProps.event;
     $.ajax({
       method: "get",
@@ -30,6 +32,9 @@ class SingleEventMap extends React.Component{
         disableAutoPan: true
       });
       marker.addListener('click', () => infowindow.open(this.map, marker));
+      this.map.setCenter({lat: lat, lng: lng});
+      window.scrollTo(0,0);
+      $(document.body).css({'cursor' : 'wait'});
       navigator.geolocation.getCurrentPosition( (startPos) => {
         const originLat = startPos.coords.latitude;
         const originLng = startPos.coords.longitude;
@@ -48,11 +53,9 @@ class SingleEventMap extends React.Component{
             window.alert('Directions request failed due to ' + status);
           }
         });
-
+        $(document.body).css({'cursor' : 'default'});
+        this.loaded = true;
       });
-
-      this.map.setCenter({lat: lat, lng: lng});
-      window.scrollTo(0,0);
     });
   }
 
