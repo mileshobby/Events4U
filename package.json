@@ -33,6 +33,7 @@
     "react-router-dom": "^4.1.1",
     "react-scroll": "^1.5.2",
     "react-slick": "^0.14.11",
+    "react-spinner": "^0.2.7",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
     "slick-carousel": "^1.6.0",

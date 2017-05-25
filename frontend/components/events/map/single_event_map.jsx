@@ -30,7 +30,6 @@ class SingleEventMap extends React.Component{
       });
       marker.addListener('mouseover', () => infowindow.open(this.map, marker));
       marker.addListener('mouseout', () => infowindow.close(this.map, marker));
-
       navigator.geolocation.getCurrentPosition( (startPos) => {
         const originLat = startPos.coords.latitude;
         const originLng = startPos.coords.longitude;
@@ -42,7 +41,7 @@ class SingleEventMap extends React.Component{
           origin: originPos,
           destination: position,
           travelMode: 'DRIVING'
-        }, function(response, status) {
+        }, (response, status) => {
           if (status === 'OK') {
             directionsDisplay.setDirections(response);
           } else {
@@ -70,7 +69,6 @@ class SingleEventMap extends React.Component{
   render(){
     return(
       <div id="single-map-container" ref={map1 => this.mapNode = map1}>
-
       </div>
     );
   }
