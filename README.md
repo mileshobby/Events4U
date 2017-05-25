@@ -38,11 +38,11 @@ The question marks replace pure strings to protect against SQL injection attacks
 
 ### Google Maps Integration
 
-This application relies on Google Maps to render the location of each event on a map. Users are required to input a full address upon creation of an event. A call to Google's Geolocation API retrieves the latitude and longitude associated with that address, which is in turn used to make an additional call to pin a marker on the "map" React component. This process is displayed on both the browse events page and the event detail page (shown below).
+This application relies on Google Maps to render the location of each event on a map. Users are required to input a full address upon creation of an event. A call to Google's Geolocation API retrieves the latitude and longitude associated with that address, which is in turn used to make an additional call to pin a marker on the "map" React component. In the event detail page, the navigator web API is used to get the current user's location, and google map's direction services is sourced to render driving directions to the event.
 
 ![Event Detail Page Google Maps Integration](http://res.cloudinary.com/events4u/image/upload/v1495662320/Screen_Shot_2017-05-24_at_2.36.56_PM_i7tgvp.png)
 
-Figaro was used to hide the API keys on Github.
+Google maps was integrated into both the event browse page and the event detail page (shown above). Figaro was used to hide the API keys on Github.
 
 
 ## Future Directions
