@@ -73,3 +73,10 @@ export const searchEvents = (search_string) => {
     data: {search_string}
   });
 };
+
+export const getRecommendedEvents = () => {
+  return $.ajax({
+    method: 'get',
+    url:'/api/events-recommended',
+  });
+};
