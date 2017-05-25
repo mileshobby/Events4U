@@ -30,6 +30,28 @@ class SingleEventMap extends React.Component{
       });
       marker.addListener('mouseover', () => infowindow.open(this.map, marker));
       marker.addListener('mouseout', () => infowindow.close(this.map, marker));
+
+      navigator.geolocation.getCurrentPosition( (startPos) => {
+        const originLat = startPos.coords.latitude;
+        const originLng = startPos.coords.longitude;
+        const originPos = new google.maps.LatLng(originLat, originLng);
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        directionsDisplay.setMap(this.map);
+        directionsService.route({
+          origin: originPos,
+          destination: position,
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+
+      });
+
       this.map.setCenter({lat: lat, lng: lng});
       window.scrollTo(0,0);
     });
