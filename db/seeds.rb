@@ -37,17 +37,18 @@ EventCategory.destroy_all
 Bookmark.destroy_all
 Ticket.destroy_all
 
-event1 = Event.create!(title: "Warriors vs. Cavs NBA Finals Game 7",
-                      full_description: "Watch as Steph Curry takes on Lebron James in the epic ending to a trilogy. This sports event is a can't miss for basketball fans.",
-                      image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487301/i_ap8ujj.jpg",
-                      date: "2017/06/06",
-                      price: 300.00,
-                      venue: "Oracle Arena",
-                      street_address: "7000 Coliseum Way",
-                      city_state_zip: "Oakland, CA 94621",
-                      host_id: User.find_by(username: "SeanPerfecto").id)
+event22 = Event.create!(title: "San Francisco Wine Tasting",
+                      full_description: "One thread weaves through this tasting -- a desire to bring you the best wines. This tasting is about the breadth of wineries from across the state, an enormous range of varietals, and wine growing appellations from all over the state.  All Family Winemakers tastings focus on wineries that are small (generally under 5000 cases), have limited marketing outreach, and will be represented by family members.  There will be wineries at this event pouring with Family Winemakers for the first time.  It's an opportunity to expand your palate. So many drinks to pick from. You can sample new releases from your classic favorites and from wineries just selling their first vintages.  CHECK out varietals you've never heard of or your best-loved Cabs and Chardonnays.  This well-respected tasting is a once-a-year opportunity to tour and taste California's wine country under one place.",
+                      image_url: "http://res.cloudinary.com/events4u/image/upload/v1495488529/tastingslide_gr2jx2.png",
+                      date: "2017/8/20",
+                      price: 100,
+                      venue: "Cruse Terminal at Pier 27",
+                      street_address: "The Embarcadero",
+                      city_state_zip: "San Francisco, CA 94111",
+                      host_id: MilesHobby.id)
 
-EventCategory.create!(event_id: event1.id, category_id: Sports.id)
+EventCategory.create!(event_id: event22.id, category_id: Food.id)
+
 
 event2 = Event.create!(title: "Pancakes & Booze Art Show",
                       full_description: "San Francisco's Largest Underground Art Show featuring:\n
@@ -95,17 +96,17 @@ event4 = Event.create!(title: "Imagine Dragons Evolve Tour",
 
 EventCategory.create!(event_id: event4.id, category_id:Music.id)
 
-event22 = Event.create!(title: "San Francisco Wine Tasting",
-                      full_description: "One thread weaves through this tasting -- a desire to bring you the best wines. This tasting is about the breadth of wineries from across the state, an enormous range of varietals, and wine growing appellations from all over the state.  All Family Winemakers tastings focus on wineries that are small (generally under 5000 cases), have limited marketing outreach, and will be represented by family members.  There will be wineries at this event pouring with Family Winemakers for the first time.  It's an opportunity to expand your palate. So many drinks to pick from. You can sample new releases from your classic favorites and from wineries just selling their first vintages.  CHECK out varietals you've never heard of or your best-loved Cabs and Chardonnays.  This well-respected tasting is a once-a-year opportunity to tour and taste California's wine country under one place.",
-                      image_url: "http://res.cloudinary.com/events4u/image/upload/v1495488529/tastingslide_gr2jx2.png",
-                      date: "2017/8/20",
-                      price: 100,
-                      venue: "Cruse Terminal at Pier 27",
-                      street_address: "The Embarcadero",
-                      city_state_zip: "San Francisco, CA 94111",
-                      host_id: MilesHobby.id)
+event1 = Event.create!(title: "Warriors vs. Cavs NBA Finals Game 7",
+                      full_description: "Watch as Steph Curry takes on Lebron James in the epic ending to a trilogy. This sports event is a can't miss for basketball fans.",
+                      image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487301/i_ap8ujj.jpg",
+                      date: "2017/06/06",
+                      price: 300.00,
+                      venue: "Oracle Arena",
+                      street_address: "7000 Coliseum Way",
+                      city_state_zip: "Oakland, CA 94621",
+                      host_id: User.find_by(username: "SeanPerfecto").id)
 
-EventCategory.create!(event_id: event22.id, category_id: Food.id)
+EventCategory.create!(event_id: event1.id, category_id: Sports.id)
 
 event5 = Event.create!(title: "Bruno Mars: 24K Magic World Tour",
                       full_description: "The North American leg will follow kicking off July 15 at T-Mobile Arena in Las Vegas and then visit over 45 cities across the U.S. including three stops in Northern California including dates at Golden 1 Center in Sacramento Tuesday, July 18. For complete details, please visit The 24K Magic World Tour official homepage at http://www.brunomars.com. Tickets for The 24K Magic World Tour, produced by Live Nation, go on sale 10am on Monday, November 21. The 24K Magic World Tour celebrates Mars' eagerly anticipated new album, 24K Magic, set to arrive worldwide on Friday, November 18 on Atlantic Records. Pre-orders are available now via the Bruno Mars Official Store, with all pre-orders from music store receiving early access to tickets for The 24K Magic Tour. This is going to be a fantastic concert.",
@@ -193,17 +194,7 @@ event11 = Event.create!(title: "San Francisco Marathon",
 
 EventCategory.create!(event_id: event11.id, category_id:Sports.id)
 
-event12 = Event.create!(title: "Japan Film Festival of San Francisco",
-                      full_description: %Q(Japan Film Festival of San Francisco is the first and only fully dedicated annual Japanese film event in the San Francisco Bay Area. Showcasing the latest in anime, live-action and documentaries straight from Japan, this week-long festival will take place in San Francisco's historic Japantown.),
-                      image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487748/JFF-Banner_q6wc7w.jpg",
-                      date: "2017/7/31",
-                      venue: "New People Cinema",
-                      price: 10,
-                      street_address: "1746 Post Street",
-                      city_state_zip: "San Francisco, CA 94115",
-                      host_id: User.find_by(username: "GuestUser").id)
 
-EventCategory.create!(event_id: event12.id, category_id:Arts.id)
 
 event13 = Event.create!(title: "Fourth of July Waterfront Festival",
                       full_description: %Q(Dazzling fireworks, local bands, food, music, arts and crafts ignite this annual waterfront party. Fireworks begin around 9:30 p.m. Dress warmly. This will be a really fun time!),
@@ -252,18 +243,6 @@ event15 = Event.create!(title: "49ers vs. Panthers",
 
 EventCategory.create!(event_id: event15.id, category_id:Sports.id)
 
-event8 = Event.create!(title: "Chocolate and Art Show",
-                      full_description: "We would like to cordially invite you to Chocolate and Art Show San Francisco, Thursday June 22th, and Friday June 23th. Indulge yourself in some of SF's finest up-and-coming artists, photographers and creators! There is something for every body including live body painting, vendors, live music, food, art, face-painting, and free chocolate!",
-                      image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487564/chocolate.jpg",
-                      date: "2017/6/23",
-                      price: 10.00,
-                      venue: "SOMAArts Cultural Center",
-                      street_address: "934 Brannan Street",
-                      city_state_zip: "San Francisco, CA 94103",
-                      host_id: User.find_by(username: "SeanPerfecto").id)
-
-EventCategory.create!(event_id: event8.id, category_id:Arts.id)
-EventCategory.create!(event_id: event8.id, category_id:Food.id)
 
 event16 = Event.create!(title: "The Design Gurus Summit",
                       full_description: %Q(Come learn from top Silicon Valley designers, thinkers and thought leaders who will share their insights on topics including tech, product design, user experience design,  design for emerging platforms, branding, marketing, creativity, entrepreneurship, design-driven startups, creative inspiration, and more.
@@ -378,6 +357,19 @@ event26 = Event.create!(title: "Summer Of Love Dance Party",
 
 EventCategory.create!(event_id: event26.id, category_id: Parties.id)
 
+event8 = Event.create!(title: "Chocolate and Art Show",
+                      full_description: "We would like to cordially invite you to Chocolate and Art Show San Francisco, Thursday June 22th, and Friday June 23th. Indulge yourself in some of SF's finest up-and-coming artists, photographers and creators! There is something for every body including live body painting, vendors, live music, food, art, face-painting, and free chocolate!",
+                      image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487564/chocolate.jpg",
+                      date: "2017/6/23",
+                      price: 10.00,
+                      venue: "SOMAArts Cultural Center",
+                      street_address: "934 Brannan Street",
+                      city_state_zip: "San Francisco, CA 94103",
+                      host_id: User.find_by(username: "SeanPerfecto").id)
+
+EventCategory.create!(event_id: event8.id, category_id:Arts.id)
+EventCategory.create!(event_id: event8.id, category_id:Food.id)
+
 event27 = Event.create!(title: "Dimensions: An Immersive Digital Art Exhibition",
                       full_description: "Mirus Gallery is proud to present itʼs first digital art exhibition featuring a collection of projection mapped environments, VR worlds, 3D printed pieces, and a series of curated still art work brought to you by the leaders in immersive experiences.",
                       image_url: "http://res.cloudinary.com/events4u/image/upload/v1495491103/Mirus.jpg",
@@ -388,6 +380,18 @@ event27 = Event.create!(title: "Dimensions: An Immersive Digital Art Exhibition"
                       host_id: ArtSF.id)
 
 EventCategory.create!(event_id: event27.id, category_id: Arts.id)
+
+event12 = Event.create!(title: "Japan Film Festival of San Francisco",
+                      full_description: %Q(Japan Film Festival of San Francisco is the first and only fully dedicated annual Japanese film event in the San Francisco Bay Area. Showcasing the latest in anime, live-action and documentaries straight from Japan, this week-long festival will take place in San Francisco's historic Japantown.),
+                      image_url: "http://res.cloudinary.com/events4u/image/upload/v1495487748/JFF-Banner_q6wc7w.jpg",
+                      date: "2017/7/31",
+                      venue: "New People Cinema",
+                      price: 10,
+                      street_address: "1746 Post Street",
+                      city_state_zip: "San Francisco, CA 94115",
+                      host_id: User.find_by(username: "GuestUser").id)
+
+EventCategory.create!(event_id: event12.id, category_id:Arts.id)
 
 event28 = Event.create!(title: "ArtSpan Artist Mixer",
                       full_description: "Mix, Mingle, and Make! Meet artists and art enthusiasts, check out the letterpress print studio and try your hand at pulling letterpress prints using wood type!
@@ -432,13 +436,47 @@ event34 = Event.create!(title: "SF Kite Festival",
                       venue: "Dolores Park",
                       street_address: "Dolores St & 19th St,",
                       city_state_zip: "San Francisco, CA 94114",
-                      host_id: Sports.id)
+                      host_id: BigSportsBrand.id)
 
 EventCategory.create!(event_id: event34.id, category_id: Parties.id)
 EventCategory.create!(event_id: event34.id, category_id: Food.id)
 EventCategory.create!(event_id: event34.id, category_id: Arts.id)
 
+event35 = Event.create!(title: "4th Annual SF Bike Race",
+full_description: "Gear up for the 4th annual remdeption of the famous sf bike race! There will be snacks and beverages sold for spectators. Come support your local sports athletes in this outdoors event!",
+image_url: "http://res.cloudinary.com/events4u/image/upload/v1495665579/6aa87c4d-64f2-4de0-8e52-b620c1121458_c0ijzg.jpg",
+date: "2017/6/30",
+venue: "Ferry Building",
+street_address: "1 Sausalito",
+city_state_zip: "San Francisco, CA 94111",
+host_id: BigSportsBrand.id)
 
+EventCategory.create!(event_id: event34.id, category_id: Sports.id)
+
+event36 = Event.create!(title: "Dog Training Classes",
+full_description: "I am offering dog training classes. I will get your dogs into shape! I will also considering accepting other pets, such as lizards, cats, or parrots into my pet academy.",
+image_url: "http://res.cloudinary.com/events4u/image/upload/v1495670051/training3_kmq1r0.jpg",
+date: "2017/7/11",
+venue: "Jeffrey's Natural Pet Foods",
+price: 60,
+street_address: "1841 Powell Street",
+city_state_zip: "San Francisco, CA 94133",
+host_id: SeanPerfecto.id)
+
+EventCategory.create!(event_id: event36.id, category_id: Classes.id)
+
+event37 = Event.create!(title: "Dream League 2017 Basketball Tournament",
+full_description: "$55 for individuals, $440 for teams, then also each team is responsible for $35 cash game fee paid to ref/scorekeeper at the gym, prior to each tipoff. DETAILS: http://www.drmlg.org/leagues/sundays/
+Signup and pay your spot in full by Mon 1/16 and get 25% OFF NIKE!!",
+image_url: "http://res.cloudinary.com/events4u/image/upload/v1495670051/training3_kmq1r0.jpg",
+date: "2017/12/1",
+venue: "Gateway High School",
+price: 55,
+street_address: "1841 Powell Street",
+city_state_zip: "San Francisco, CA 94133",
+host_id: BigSportsBrand.id)
+
+EventCategory.create!(event_id: event37.id, category_id: Sports.id)
 
 #EVENT_CATEGORY_SEEDS
 Bookmark.create!(user_id: GuestUser.id, event_id: event1.id)

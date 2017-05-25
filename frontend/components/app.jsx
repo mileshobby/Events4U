@@ -21,7 +21,7 @@ const App = () => (
       </header>
       <Route exact path="/" component={Home} />
       <Route exact path="/events/:eventId" component={EventDetailContainer} />
-      <Route exact path="/new-event" component={EventFormContainer} />
+      <AuthRoute exact path="/new-event" component={EventFormContainer} />
       <Route path="/browse-events/:category/:searchString?" component={ BrowseEventsContainer } />
       <AuthRoute path="/user-events" component={ UserEventsContainer } />
     </div>

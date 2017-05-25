@@ -11,6 +11,11 @@ class BrowseEvents extends React.Component{
 
   componentDidMount(){
     window.scrollTo(0,0);
+    const category = this.props.match.params.category;
+    let searchString = this.props.match.params.searchString;
+    if(category === "Search" && !searchString){
+      this.props.fetchAllEvents();
+    }
   }
 
   render(){
@@ -22,7 +27,8 @@ class BrowseEvents extends React.Component{
         unBookmarkEvent={this.props.unBookmarkEvent}
         loggedIn={this.props.loggedIn}
         />
-  ));
+    ));
+
     if (events.length === 0){
       events = <div className="search-results-text">Sorry! We could not find any events matching "{this.props.match.params.searchString}". We are still
                     a growing web service with a limited number of events. Try some popular searches, like...

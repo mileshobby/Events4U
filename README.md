@@ -22,6 +22,10 @@ On the browse events page of the application, users can filter events by categor
 
 The above image depicts images which allow users to view events filtered by their categories.
 
+### Tickets && Bookmarks
+
+Both Bookmarks and Tickets are defined by a join table between users and events. When a user buys or bookmarks an event, a new row in the respective table is created. Upon mounting of the "my events" component, 
+
 ### Search
 
 Users can also search for events. This is handled by a "search bar" component, which sends an API call to the rails back-end upon submission of a "search string". A SQL query is then performed as follows:

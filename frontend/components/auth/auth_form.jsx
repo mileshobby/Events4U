@@ -106,7 +106,7 @@ class AuthForm extends React.Component{
         <input
           type="submit"
           onClick={this.handleSubmit}
-          value={this.header}>
+          value={this.state.type}>
         </input>
 
         <h3 onClick={this.toggleType}>{this.navLink()}</h3>
