@@ -15,7 +15,7 @@ class Home extends React.Component{
       <div id="home">
         <div id='main-home-img-container'>
           <img
-            src="http://res.cloudinary.com/events4u/image/upload/v1495089580/color_splash_copy_qli1my.jpg"
+            src="https://res.cloudinary.com/events4u/image/upload/v1495089580/color_splash_copy_qli1my.jpg"
             id="main-home-img">
           </img>
           <div id="main-home-img-title">
