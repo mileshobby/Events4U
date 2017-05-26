@@ -18,13 +18,15 @@ Events are related to different Categories via a join table in the database: Eve
 
 On the browse events page of the application, users can filter events by category. On the front-end, a "filter" component listens for selection of a category in its list. When a category is clicked, a change in the route triggers an API call to a controller action, which fetches all of events associated with the particular category clicked on.
 
-![Browse Events Page](http://res.cloudinary.com/events4u/image/upload/v1495660853/BrowseByTopCategory_dvzaxu.png)
+![Browse Events Page](https://res.cloudinary.com/events4u/image/upload/v1495660853/BrowseByTopCategory_dvzaxu.png)
 
 The above image depicts images which allow users to view events filtered by their categories.
 
 ### Tickets & Bookmarks
 
-Both Bookmarks and Tickets are defined by a join table between users and events. When a user buys or bookmarks an event, a new row in the respective table is created. Upon mounting of the "my events" component,
+Both Bookmarks and Tickets are defined by a join table between users and events. When a user buys or bookmarks an event, a new row in the respective table is created. Each Event is rendered on the front end with a bookmark; a filled in bookmark denotes the event beings saved. Saved events can be found by navigating to the "Saved Events" page via the dropdown on the navbar. When a user clicks a bookmark, an API call is sent to the back end to either create a new bookmark between the event and the current user, or to destroy that bookmark.
+
+Tickets are handled in a similar way, but are only available to be "purchased" when the user navigates to the events detailed page. Tickets cannot be refunded.
 
 ### Search & AutoComplete
 
@@ -62,18 +64,10 @@ Google maps was integrated into both the event browse page and the event detail 
 
 Next steps for Events4u the following:
 
-### Database Population
-
-In order to provide a true search/browsing experience, it would be necessary to add a lot more data to the database. Perhaps sourcing this job to an external API (perhaps event EventBrite's API) would make sense.
-
 ### Tags
 
-While currently, events are tagged with categories, it would make sense to allow for other tags as well. This would enhance search capabilities for users.
+While currently, events are tagged with categories, it would make sense to allow for other tags as well. This would enhance search capabilities for users by speeding up queries (searching tags is a lot faster than searching through lengthy descriptions) and improving accuracy.
 
 ### Calendar
 
-I would also like to add a calendar page in order to view events by date, for both their own events and for all events.
-
-### Cross-Browser/Mobile Compatibility
-
-This web application was developed in about a week, and due to these constraints was mainly built for use on laptop's using Chrome. With more time, I would like to optimize the app for viewing on mobile devices or other browsers, like Safari and Firefox.
+I would also like to add a calendar page in order to view events by date, for both their own events and for all events. This would allow users to more easily find events according to the dates they were interested in.

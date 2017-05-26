@@ -74,7 +74,7 @@ class BrowseEvents extends React.Component{
     ));
 
     let resultsText;
-    if (events.length === 0){
+    if (events.length === 0 && category === "Search"){
       resultsText = <div className="search-results-text">Sorry! We could not find any events matching "{this.props.match.params.searchString}". We are still
                     a growing web service with a limited number of events. Try some popular searches, like...
                     <strong>concert</strong>, <strong>festival</strong>, or <strong>game</strong>! </div>;

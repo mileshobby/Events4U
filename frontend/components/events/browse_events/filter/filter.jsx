@@ -72,7 +72,7 @@ class Filter extends React.Component{
     document.getElementById("load-button").disabled = false;
     if(category === 'All'){
       this.props.clearEvents();
-      this.props.fetchSomeEvents(this.props.offset);
+      this.props.fetchSomeEvents();
     }
     else if(category === 'Search'){
       // let searchString = this.props.match.params.searchString;
