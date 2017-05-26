@@ -2,9 +2,9 @@
 
 #### [Events4u live](https://events4u.herokuapp.com "Events4U Homepage")
 
-Events4u is a full-stack web application inspired by EventBrite. It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend.
+Events4u is a full-stack web application inspired by EventBrite. It utilizes a Ruby on Rails backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend.
 
-The event allows users to create events, browse events, and "buy" tickets for an event (actual transaction was not implemented).
+The application allows users to create events, browse events, and "buy" tickets for an event (actual transaction was not implemented).
 
 ## Features & Implementation
 
@@ -16,7 +16,7 @@ Events are stored in the database with their id, title, address, date, descripti
 
 Events are related to different Categories via a join table in the database: EventCategories. Categories are a simple table with columns for only id and name. This is a many-to-many relation, as an event can have many categories and a category can have many events.
 
-On the browse events page of the application, users can filter events by category. On the front-end, a "filter" component listens for selection of a category in its list. When a category is clicked, a change in the route triggers an API call to a controller action, which fetches all of events associated with the particular category clicked on.
+On the browse events page of the application, users can filter events by category. A "filter" component listens for selection of a category in its list. When a category is clicked, a change in the route triggers an API call to a controller action, which fetches all of events associated with the particular category clicked on.
 
 ![Browse Events Page](https://res.cloudinary.com/events4u/image/upload/v1495660853/BrowseByTopCategory_dvzaxu.png)
 
@@ -24,7 +24,7 @@ The above image depicts images which allow users to view events filtered by thei
 
 ### Tickets & Bookmarks
 
-Both Bookmarks and Tickets are defined by a join table between users and events. When a user buys or bookmarks an event, a new row in the respective table is created. Each Event is rendered on the front end with a bookmark; a filled in bookmark denotes the event beings saved. Saved events can be found by navigating to the "Saved Events" page via the dropdown on the navbar. When a user clicks a bookmark, an API call is sent to the back end to either create a new bookmark between the event and the current user, or to destroy that bookmark.
+Both Bookmarks and Tickets are defined by a join table between users and events. When a user buys or bookmarks an event, a new row in the respective table is created. Each Event is rendered on the front end with a bookmark; a filled in bookmark denotes the event beings saved. Saved events can be found by navigating to the "Saved Events" page via the dropdown on the nav-bar. When a user clicks a bookmark, an API call is sent to the back end to either create a new bookmark between the event and the current user, or to destroy that bookmark.
 
 Tickets are handled in a similar way, but are only available to be "purchased" when the user navigates to the events detailed page. Tickets cannot be refunded.
 
@@ -62,11 +62,11 @@ Google maps was integrated into both the event browse page and the event detail 
 
 ## Future Directions
 
-Next steps for Events4u the following:
+Next steps for Events4u are the following:
 
 ### Tags
 
-While currently, events are tagged with categories, it would make sense to allow for other tags as well. This would enhance search capabilities for users by speeding up queries (searching tags is a lot faster than searching through lengthy descriptions) and improving accuracy.
+While events can already tagged be with distinct categories, it would make sense to allow for other tags as well. This would enhance search capabilities for users by speeding up queries (searching tags is a lot faster than searching through lengthy descriptions) and improving accuracy.
 
 ### Calendar
 
