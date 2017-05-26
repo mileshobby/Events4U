@@ -45,6 +45,7 @@ class EventDetail extends React.Component{
     let {title, full_description, image_url, host,
            price, date, venue, street_address, city_state_zip, bookmarked, id, categories} = this.props.eventDetails;
     price = (price === 0 ? "Free" : `$${price}`);
+    if (!categories) return <div></div>;
     if (categories){
       categories = categories.join(" ∙ ");
     }
