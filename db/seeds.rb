@@ -520,7 +520,7 @@ EventCategory.create!(event_id: event36.id, category_id: Classes.id)
 event37 = Event.create!(title: "Dream League 2017 Basketball Tournament",
 full_description: "$55 for individuals, $440 for each basketball teams, then also each team is responsible for $35 cash game fee paid to ref/scorekeeper at the gym, prior to each tipoff. DETAILS: https://www.drmlg.org/leagues/sundays/
 Signup and pay your spot in full by Mon 1/16 and get 25% OFF NIKE!!",
-image_url: "http://res.cloudinary.com/events4u/image/upload/v1495747364/Jamboree_20Jerseys_Home_20Page_20Hero_20_281_29_frzs3v.jpg",
+image_url: "https://res.cloudinary.com/events4u/image/upload/v1495747364/Jamboree_20Jerseys_Home_20Page_20Hero_20_281_29_frzs3v.jpg",
 date: "2017/12/1",
 venue: "Gateway High School",
 price: 55,

@@ -167,8 +167,10 @@ class Api::EventsController < ApplicationController
       #if we still haven't found 3 events, place 3 random new events in recommendations
       num_events_needed = 3 - recommended_events.count
       if num_events_needed > 0
-        events = Event.where('id NOT in (?)', current_user_events).to_a.sample(num_events_needed)
-        recommended_events.push(events)
+        event_ids = current_user.event_ids
+        event_ids = [-1] if event_ids.empty?
+        events = Event.where('id NOT in (?)', event_ids).to_a.sample(num_events_needed)
+        recommended_events.concat(events)
       end
 
       @events = recommended_events
