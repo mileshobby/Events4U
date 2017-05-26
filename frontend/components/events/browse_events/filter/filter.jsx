@@ -56,6 +56,7 @@ class Filter extends React.Component{
   }
 
   componentDidMount(){
+    this.props.clearEvents();
     let category = this.props.category;
     document.getElementById("load-button").disabled = false;
     if(category === 'All'){
