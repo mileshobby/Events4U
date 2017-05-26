@@ -41,6 +41,15 @@ class BrowseEvents extends React.Component{
     }
   }
 
+  componentWillReceiveProps(nextProps){
+    if(nextProps.events.length < 10){
+      document.getElementById("load-button").disabled = true;
+    }
+    else{
+      document.getElementById("load-button").disabled = false;
+    }
+  }
+
   componentDidMount(){
     window.scrollTo(0,0);
     const category = this.props.match.params.category;

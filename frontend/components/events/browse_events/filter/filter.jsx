@@ -12,9 +12,17 @@ class Filter extends React.Component{
   filterEvents(category){
     return (e) => {
       this.props.clearEvents();
-      this.props.fetchFilteredEvents({category_names: [category]});
+      this.props.fetchFilteredEvents({category_names: [category]})
+      .then((res)=>{
+        this.props.history.push(`/browse-events/${category}`);
+        if (Object.keys(res.events).length < 10){
+          document.getElementById("load-button").disabled = true;
+        }
+        else{
+          document.getElementById("load-button").disabled = false;
+        }
+      });
       this.props.history.push(`/browse-events/${category}`);
-      document.getElementById("load-button").disabled = false;
     };
   }
 
