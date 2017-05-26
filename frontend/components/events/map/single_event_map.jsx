@@ -9,6 +9,7 @@ class SingleEventMap extends React.Component{
   }
 
   componentWillReceiveProps(nextProps) {
+    debugger;
     if(!nextProps.event) return;
     if(this.loaded) return;
     let {title, street_address, city_state_zip} = nextProps.event;
@@ -69,6 +70,8 @@ class SingleEventMap extends React.Component{
       zoom: 15
     };
     this.map = new google.maps.Map(this.mapNode, mapOptions);
+    //fix for last minute bug...refactor this!!!
+    this.componentWillReceiveProps(this.props);
   }
 
 
