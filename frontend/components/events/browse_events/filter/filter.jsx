@@ -54,7 +54,7 @@ class Filter extends React.Component{
 
   unFilterEvents(e){
     this.props.clearEvents();
-    this.props.fetchSomeEvents(this.props.offset);
+    this.props.fetchSomeEvents();
     this.props.history.push(`/browse-events/All`);
     document.getElementById("load-button").disabled = false;
   }
