@@ -28,6 +28,13 @@
     }
   }
 }
+#recommended-events-title{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
 
 .trending-events-title{
   text-align: center;
@@ -46,4 +53,16 @@
   margin-bottom: 50px;
   margin-top: 50px;
   font-size: 30px;
+}
+
+#recommended-events{
+  max-width: 1250px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  .event-slider-item{
+    height: 300px;
+    flex: 1;
+  }
+
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import EventSliderContainer from '../events/index_event/event_slider_container';
 import { Link } from 'react-router-dom';
 import EventSearchContainer from './category_search/category_search_container';
+import RecommendedEventsContainer from '../events/recommended_events/recommended_events_container';
 
 class Home extends React.Component{
 
@@ -28,7 +29,7 @@ class Home extends React.Component{
         </div>
         <section id='event-slider-container'>
         <h1 className='trending-events-title'>
-          Trending Events4U
+          Trending Events
         </h1>
 
         <EventSliderContainer />
@@ -37,6 +38,10 @@ class Home extends React.Component{
             See All Events
           </Link>
         </div>
+        </section>
+
+        <section>
+          <RecommendedEventsContainer />
         </section>
 
         <h1 id="events-by-category">Browse By Top Category</h1>

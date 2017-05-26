@@ -7,3 +7,7 @@ export const allEvents = (state) => {
 export const allCategories = (state) => {
   return values(state.categories);
 };
+
+export const allRecommendedEvents = (state) => {
+  return values(state.recommendedEvents);
+};

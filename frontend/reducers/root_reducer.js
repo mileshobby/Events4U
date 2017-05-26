@@ -4,6 +4,7 @@ import ErrorsReducer from './errors_reducer';
 import EventsReducer from './events_reducer';
 import EventDetailsReducer from './event_details_reducer';
 import CategoryReducer from './category_reducer';
+import RecommendedEventsReducer from './recommended_events_reducer';
 
 
 const rootReducer = combineReducers({
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   events: EventsReducer,
   eventDetails: EventDetailsReducer,
   categories: CategoryReducer,
+  recommendedEvents: RecommendedEventsReducer
 });
 
 export default rootReducer;

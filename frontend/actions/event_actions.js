@@ -130,5 +130,5 @@ export const fetchMatchingEvents = (search_string) => dispatch => {
 
 export const fetchRecommendedEvents = () => dispatch => {
   return APIUtil.getRecommendedEvents()
-    .then((events) => dispatch(receiveRecommendedEvents));
+    .then((events) => dispatch(receiveRecommendedEvents(events)));
 };
