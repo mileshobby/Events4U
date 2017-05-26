@@ -22,19 +22,33 @@ On the browse events page of the application, users can filter events by categor
 
 The above image depicts images which allow users to view events filtered by their categories.
 
-### Tickets && Bookmarks
+### Tickets & Bookmarks
 
 Both Bookmarks and Tickets are defined by a join table between users and events. When a user buys or bookmarks an event, a new row in the respective table is created. Upon mounting of the "my events" component,
 
-### Search
+### Search & AutoComplete
 
-Users can also search for events. This is handled by a "search bar" component, which sends an API call to the rails back-end upon submission of a "search string". A SQL query is then performed as follows:
+Users can also search for events. This is handled by a "search bar" component. Whenever the user inputs a new character, an API call is made to the rails back-end to fetch up to 5 matching event titles using the following injection-safe SQL query:  
 ````ruby
-@events = Event.where("title LIKE ? OR full_description LIKE ?",
-          "%#{params[:search_string]}%", "%#{params[:search_string]}%")
+@event_titles = Event.where("LOWER(title) LIKE LOWER(:search_string) OR LOWER(full_description) LIKE LOWER(:search_string)",
+search_string: "%#{params[:search_string]}%").limit(5).pluck(:title);)
 ````
-The question marks replace pure strings to protect against SQL injection attacks. This query will return all events whose title or description contain the search fragment. The resulting events will then be rendered by the index jbuilder view and will replace all events in the "events" slice of state of the store. Finally, the user is routed to the browse events page, which displays all events in the store.
+Upon submission of the form, the component sends another API call to the rails back-end upon submission of a "search string".
+The resulting events will then be rendered by the index jbuilder view and will replace all events in the "events" slice of state of the store. Finally, the user is routed to the browse events page, which displays all events in the store.
 
+### Recommendations
+
+This application utilizes collaborative filtering to suggest events to users. Collaborative filtering is a method of predicting what one user will like based upon a sampling of other similar users. The algorithm hinges on finding users who have been interested in the same events in the past, and assumes that these users will continue to be interested in the same events.
+
+Similarity scores between two users are calculated using the formula for the Jaccard similarity coefficient:
+
+![Formula for Jaccard Index ](http://res.cloudinary.com/events4u/image/upload/v1495823653/Screen_Shot_2017-05-26_at_11.31.26_AM_biuoad.png)
+
+Where A is the set of all events UserA has either saved or purchased, and B is the set of all events UserB has either saved or purchased. This formula yields a similarity score between 0 and 1, with 1 being identical users and 0 being users with nothing in common.
+
+Events are recommended based upon events that the most similar users have either purchased or saved that the the current user has neither purchased nor saved.
+
+As a user purchases or saves new events (and other others purchase/saved new events), the recommendation engine will make new recommendations based upon these changes.
 
 ### Google Maps Integration
 
@@ -43,7 +57,6 @@ This application relies on Google Maps to render the location of each event on a
 ![Event Detail Page Google Maps Integration](https://res.cloudinary.com/events4u/image/upload/v1495730502/Screen_Shot_2017-05-25_at_9.40.54_AM_hxjzxm.png)
 
 Google maps was integrated into both the event browse page and the event detail page (shown above). Figaro was used to hide the API keys on Github.
-
 
 ## Future Directions
 
