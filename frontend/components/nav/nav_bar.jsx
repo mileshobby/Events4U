@@ -14,20 +14,28 @@ class NavBar extends React.Component{
     return(
       <ul className="navbar-links" id='logged-in-links'>
         <div className="dropdown">
-          <div>
-          <Link to="/user-events">{this.props.currentUser.username}</Link>&nbsp;
-          <i className="fa fa-angle-double-down" aria-hidden="true"></i>
-          </div>
+          <Link to="/user-events">
+            <div>
+              {this.props.currentUser.username}&nbsp;
+            <i className="fa fa-angle-double-down" aria-hidden="true"></i>
+            </div>
+          </Link>
           <ul className="dropdown-content">
-            <li>
-              <Link to="/user-events/bookmarks">Saved Events</Link>
-            </li>
-            <li>
-              <Link to="/user-events/tickets">Tickets</Link>
-            </li>
-            <li>
-              <Link to="/user-events/hosted-events">Hosted Events</Link>
-            </li>
+            <Link to="/user-events/bookmarks">
+              <li>
+                Saved Events
+              </li>
+            </Link>
+            <Link to="/user-events/tickets">
+              <li>
+                Tickets
+              </li>
+            </Link>
+            <Link to="/user-events/hosted-events">
+              <li>
+                Hosted Events
+              </li>
+            </Link>
             <button
               className="log-out-button"
               onClick={this.props.logout}>
@@ -35,8 +43,8 @@ class NavBar extends React.Component{
             </button>
           </ul>
         </div>
-        <li><Link to="/browse-events/All">Browse Events</Link></li>
-        <li><Link to="/new-event">Create Event</Link></li>
+        <Link to="/browse-events/All"><li>Browse Events</li></Link>
+        <Link to="/new-event"><li>Create Event</li></Link>
       </ul>
     );
   }

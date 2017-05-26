@@ -78,7 +78,6 @@
     flex-direction: column;
     justify-content: center;
     margin: 0px 15px;
-    transition: all .8s ease-in-out;
 }
 
 .dropdown:hover{
@@ -117,4 +116,9 @@
   margin: 0px 15px;
   padding: 16px 0px;
   font-weight: bolder;
+}
+
+.log-out-button{
+  width: 100%;
+  text-align: left;
 }
