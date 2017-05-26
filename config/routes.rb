@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   get 'api/events-purchased' => 'api/events#attended_events'
   get 'api/events-search' => 'api/events#search'
   get 'api/events-recommended' => 'api/events#recommended_events'
+  get 'api/events-autocomplete' => 'api/events#autocomplete'
 end

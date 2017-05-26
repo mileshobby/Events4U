@@ -14,6 +14,8 @@ export const RECEIVE_RECOMMENDED_EVENTS = "RECEIVE_RECOMMENDED_EVENTS";
 export const CLEAR_RECOMMENDED_EVENTS = "CLEAR_RECOMMENDED_EVENTS";
 export const LOAD_EVENTS = "LOAD_EVENTS";
 export const CLEAR_EVENTS = "CLEAR_EVENTS";
+export const RECEIVE_AUTOCOMPLETE_RESULTS = "RECEIVE_AUTOCOMPLETE_RESULTS";
+export const CLEAR_AUTOCOMPLETE_RESULTS = "CLEAR_AUTOCOMPLETE_RESULTS";
 
 export const receiveNewEvent = event => ({
   type: RECEIVE_EVENT,
@@ -56,6 +58,14 @@ export const removeBookmarkFromEvent = id => ({
 export const receiveRecommendedEvents = events => ({
   type: RECEIVE_RECOMMENDED_EVENTS,
   events
+});
+
+export const receiveAutoCompleteResults = results => ({
+  type: RECEIVE_AUTOCOMPLETE_RESULTS,
+  results
+});
+export const clearAutoCompleteResults = () => ({
+  type: CLEAR_AUTOCOMPLETE_RESULTS
 });
 
 export const clearRecommendedEvents = () => ({
@@ -142,4 +152,9 @@ export const fetchMatchingEvents = (search_string) => dispatch => {
 export const fetchRecommendedEvents = () => dispatch => {
   return APIUtil.getRecommendedEvents()
     .then((events) => dispatch(receiveRecommendedEvents(events)));
+};
+
+export const fetchAutoCompleteResults = (searchString) => dispatch => {
+  return APIUtil.getAutoCompleteResults(searchString)
+    .then((results) => dispatch(receiveAutoCompleteResults(results)));
 };

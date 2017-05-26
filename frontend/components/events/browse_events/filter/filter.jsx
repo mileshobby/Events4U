@@ -48,6 +48,10 @@ class Filter extends React.Component{
     }
   }
 
+  componentWillUnmount(){
+    this.props.clearEvents();
+  }
+
   unFilterEvents(e){
     this.props.clearEvents();
     this.props.fetchSomeEvents(this.props.offset);
@@ -56,10 +60,10 @@ class Filter extends React.Component{
   }
 
   componentDidMount(){
-    this.props.clearEvents();
     let category = this.props.category;
     document.getElementById("load-button").disabled = false;
     if(category === 'All'){
+      this.props.clearEvents();
       this.props.fetchSomeEvents(this.props.offset);
     }
     else if(category === 'Search'){
@@ -68,6 +72,7 @@ class Filter extends React.Component{
       return;
     }
     else{
+      this.props.clearEvents();
       this.props.fetchFilteredEvents({category_names: [category]});
     }
   }

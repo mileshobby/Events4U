@@ -82,3 +82,11 @@ export const getRecommendedEvents = () => {
     url:'/api/events-recommended',
   });
 };
+
+export const getAutoCompleteResults = (search_string) => {
+  return $.ajax({
+    method: 'get',
+    url:'/api/events-autocomplete',
+    data: {search_string}
+  });
+};

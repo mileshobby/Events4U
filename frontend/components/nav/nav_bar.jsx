@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from 'react-router-dom';
 import AuthModal from '../modal/auth_modal';
-import SearchBar from '../search/search_bar';
+import SearchBarContainer from '../search/search_bar_container';
 
 class NavBar extends React.Component{
   constructor(props){
@@ -62,7 +62,7 @@ class NavBar extends React.Component{
       <nav id='main-nav'>
         <div id='left-nav'>
           <div className="logo"><Link to="/">Events4U</Link></div>
-          <SearchBar fetchMatchingEvents={this.props.fetchMatchingEvents}/>
+          <SearchBarContainer fetchMatchingEvents={this.props.fetchMatchingEvents}/>
         </div>
         {navLinks}
       </nav>

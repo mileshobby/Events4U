@@ -31,7 +31,7 @@ input[type=search] {
 input[type=search]:focus {
 	width: 200px;
 	background-color: #fff;
-	border-color: #C63D0F;;
+	border-color: #99CCCC;
 
 	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
 	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
@@ -44,4 +44,29 @@ input:-moz-placeholder {
 }
 input::-webkit-input-placeholder {
 	color: #999;
+}
+
+#search-bar-container{
+	position: relative;
+	#autocomplete-results{
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		width: 200px;
+		background-color: #fff;
+		border-radius: 8px;
+		li{
+			border: 1px solid #99CCCC;
+			z-index: 100;
+			width: 232px;
+			padding: 5px;
+			font-size: 14px;
+			background-color: #fff;
+			&:hover{
+				cursor: pointer;
+				background-color: #efefef;
+				color: #C63D0F;
+			}
+		}
+	}
 }

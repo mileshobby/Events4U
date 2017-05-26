@@ -5,6 +5,7 @@ import EventsReducer from './events_reducer';
 import EventDetailsReducer from './event_details_reducer';
 import CategoryReducer from './category_reducer';
 import RecommendedEventsReducer from './recommended_events_reducer';
+import AutoCompleteResultsReducer from './autocomplete_results_reducer';
 
 
 const rootReducer = combineReducers({
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
   events: EventsReducer,
   eventDetails: EventDetailsReducer,
   categories: CategoryReducer,
-  recommendedEvents: RecommendedEventsReducer
+  recommendedEvents: RecommendedEventsReducer,
+  autoCompleteResults: AutoCompleteResultsReducer
 });
 
 export default rootReducer;

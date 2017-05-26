@@ -117,6 +117,12 @@ class Api::EventsController < ApplicationController
     render :index
   end
 
+  def autocomplete
+    @event_titles = Event.where("title LIKE ? OR full_description LIKE ?",
+              "%#{params[:search_string]}%", "%#{params[:search_string]}%").limit(5).pluck(:title);
+    render json: @event_titles
+  end
+
   def recommended_events
     #find top 3 recommended events for a user
     if current_user
@@ -151,7 +157,7 @@ class Api::EventsController < ApplicationController
         other_user_events = (user.purchased_events).to_a.concat(user.bookmarked_events.to_a).uniq
         #set difference
         new_events = other_user_events - current_user_events
-        new_events.each do |event|
+        new_events.shuffle!.each do |event|
           recommended_events.push(event)
           break if recommended_events.count == 3
         end
