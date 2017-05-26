@@ -1,5 +1,5 @@
 import { RECEIVE_NEW_EVENT, RECEIVE_EVENTS, DESTROY_EVENT, RECEIVE_EVENT,
-          ADD_BOOKMARK_TO_EVENT, REMOVE_BOOKMARK_FROM_EVENT}
+          ADD_BOOKMARK_TO_EVENT, REMOVE_BOOKMARK_FROM_EVENT, LOAD_EVENTS, CLEAR_EVENTS}
   from '../actions/event_actions';
 import merge from 'lodash/merge';
 
@@ -16,6 +16,10 @@ const EventsReducer = (state = {}, action) => {
                         bookmarked: action.event.bookmarked};
       newState[action.event.id] = newEvent;
       return newState;
+    case LOAD_EVENTS:
+      return merge({}, state, action.events);
+    case CLEAR_EVENTS:
+      return {};
     case ADD_BOOKMARK_TO_EVENT:
       let event = state[action.id];
       if(!event){

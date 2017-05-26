@@ -28,21 +28,23 @@ class Home extends React.Component{
           </div>
         </div>
         <section id='event-slider-container'>
-        <h1 className='trending-events-title'>
-          Trending Events
-        </h1>
+          <h1 className='trending-events-title'>
+            Trending Events
+          </h1>
 
-        <EventSliderContainer />
-        <div className="see-more-button-container">
-          <Link to="/browse-events/All" className='see-more-button'>
-            See All Events
-          </Link>
-        </div>
+          <EventSliderContainer />
+
+          <section>
+            <RecommendedEventsContainer />
+          </section>
+
+          <div className="see-more-button-container">
+            <Link to="/browse-events/All" className='see-more-button'>
+              See All Events
+            </Link>
+          </div>
         </section>
 
-        <section>
-          <RecommendedEventsContainer />
-        </section>
 
         <h1 id="events-by-category">Browse By Top Category</h1>
         <EventSearchContainer />

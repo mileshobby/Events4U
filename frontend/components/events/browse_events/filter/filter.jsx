@@ -11,8 +11,10 @@ class Filter extends React.Component{
 
   filterEvents(category){
     return (e) => {
+      this.props.clearEvents();
       this.props.fetchFilteredEvents({category_names: [category]});
       this.props.history.push(`/browse-events/${category}`);
+      document.getElementById("load-button").disabled = false;
     };
   }
 
@@ -47,14 +49,17 @@ class Filter extends React.Component{
   }
 
   unFilterEvents(e){
-    this.props.fetchAllEvents();
+    this.props.clearEvents();
+    this.props.fetchSomeEvents(this.props.offset);
     this.props.history.push(`/browse-events/All`);
+    document.getElementById("load-button").disabled = false;
   }
 
   componentDidMount(){
     let category = this.props.category;
+    document.getElementById("load-button").disabled = false;
     if(category === 'All'){
-      this.props.fetchAllEvents();
+      this.props.fetchSomeEvents(this.props.offset);
     }
     else if(category === 'Search'){
       // let searchString = this.props.match.params.searchString;
@@ -70,7 +75,7 @@ class Filter extends React.Component{
   //   if(this.props.search){
   //     let category = nextProps.category;
   //     if(category === 'All'){
-  //       nextProps.fetchAllEvents();
+  //       nextProps.fetchSomeEvents();
   //     }
   //     else if(category === 'all'){
   //       let searchString = nextProps.match.params.searchString;

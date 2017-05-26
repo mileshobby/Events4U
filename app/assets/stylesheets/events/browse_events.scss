@@ -108,3 +108,39 @@
     }
   }
 }
+
+#load-button{
+  text-align: center;
+  border: none;
+  width: 400px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: gray;
+  background-color: #C63D0F;
+  color: white;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 30px;
+  vertical-align: center;
+  padding: 10px 5px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  letter-spacing: 150%;
+  &:disabled{
+    -webkit-filter: brightness(75%); /* Safari */
+    filter: brightness(75%);
+    &:hover{
+      cursor: not-allowed !important;
+    }
+  }
+  &:hover{
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  &:focus{
+    outline: none;
+  }
+}

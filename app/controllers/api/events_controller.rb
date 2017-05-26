@@ -3,7 +3,8 @@ require 'set'
 class Api::EventsController < ApplicationController
 
   def index
-    @events = Event.includes(:categories).all
+    offset = params[:offset] || 0
+    @events = Event.includes(:categories).limit(10).offset(offset)
     if current_user
       @bookmarked_events = current_user.bookmarked_events
     else
@@ -61,10 +62,11 @@ class Api::EventsController < ApplicationController
 
   def filter
     #BY CATEGORY
+    offset = params[:offset] || 0
     categories = Category.where(name: params[:category_names])
     @events = []
     categories.each do |category|
-      @events.concat(category.events.includes(:categories))
+      @events.concat(category.events.limit(10).offset(offset).includes(:categories))
     end
     if current_user
       @bookmarked_events = current_user.bookmarked_events

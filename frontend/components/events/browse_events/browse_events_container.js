@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import BrowseEvents from './browse_events';
-import { fetchAllEvents, bookmarkEvent, unBookmarkEvent, deleteEvent,
-          fetchMatchingEvents} from '../../../actions/event_actions';
+import { fetchSomeEvents, bookmarkEvent, unBookmarkEvent, deleteEvent,
+          fetchMatchingEvents, fetchFilteredEvents, clearEvents} from '../../../actions/event_actions';
 import { allEvents } from '../../../reducers/selectors';
 
 const mapStateToProps = (state) => ({
@@ -10,9 +10,11 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchAllEvents: () => dispatch(fetchAllEvents()),
+  fetchSomeEvents: (offset) => dispatch(fetchSomeEvents(offset)),
   bookmarkEvent: (eventId) => dispatch(bookmarkEvent(eventId)),
-  unBookmarkEvent: (eventId) => dispatch(unBookmarkEvent(eventId))
+  unBookmarkEvent: (eventId) => dispatch(unBookmarkEvent(eventId)),
+  fetchFilteredEvents: (filters) => dispatch(fetchFilteredEvents(filters)),
+  clearEvents: () => dispatch(clearEvents())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BrowseEvents);

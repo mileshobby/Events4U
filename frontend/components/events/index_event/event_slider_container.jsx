@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import EventSlider from './event_slider';
-import { fetchAllEvents, bookmarkEvent, unBookmarkEvent } from '../../../actions/event_actions';
+import { fetchSomeEvents, bookmarkEvent, unBookmarkEvent } from '../../../actions/event_actions';
 import { allEvents } from '../../../reducers/selectors';
 
 const mapStateToProps = (state) => ({
@@ -9,7 +9,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchAllEvents: () => dispatch(fetchAllEvents()),
+  fetchSomeEvents: () => dispatch(fetchSomeEvents()),
   bookmarkEvent: (eventId) => dispatch(bookmarkEvent(eventId)),
   unBookmarkEvent: (eventId) => dispatch(unBookmarkEvent(eventId))
 });

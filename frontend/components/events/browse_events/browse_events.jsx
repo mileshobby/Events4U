@@ -7,6 +7,38 @@ import EventMap from '../map/event_map';
 class BrowseEvents extends React.Component{
   constructor(props){
     super(props);
+    this.loadMoreEvents = this.loadMoreEvents.bind(this);
+  }
+
+  loadMoreEvents(e){
+    e.preventDefault();
+    let offset = this.props.events.length;
+    let category = this.props.match.params.category;
+    if (category === "All"){
+      this.props.fetchSomeEvents(offset)
+      .then((res)=>{
+        if (Object.keys(res.events).length < 10){
+          document.getElementById("load-button").disabled = true;
+        }
+        else{
+          document.getElementById("load-button").disabled = false;
+        }
+      });
+    }
+    else if (category === 'Search'){
+      this.props.fetchMatchingEvents(this.props.match.params.searchString);
+    }
+    else{
+      this.props.fetchFilteredEvents({category_names: [category], offset: this.props.events.length})
+      .then((res)=>{
+        if (Object.keys(res.events).length < 10){
+          document.getElementById("load-button").disabled = true;
+        }
+        else{
+          document.getElementById("load-button").disabled = false;
+        }
+      });
+    }
   }
 
   componentDidMount(){
@@ -14,7 +46,7 @@ class BrowseEvents extends React.Component{
     const category = this.props.match.params.category;
     let searchString = this.props.match.params.searchString;
     if(category === "Search" && !searchString){
-      this.props.fetchAllEvents();
+      this.props.fetchSomeEvents();
     }
   }
 
@@ -48,12 +80,23 @@ class BrowseEvents extends React.Component{
             <EventMap events={this.props.events}/>
           </div>
           <Route path="/browse-events/:category/:searchString?" render={()=>
-              <FilterContainer category={category} search={search}/> } />
+              <FilterContainer
+                offset={this.props.events.length}
+                category={category}
+                search={search}/> }
+                ref={this.filter}/>
         </div>
         <ul className="browse-events-list">
           <h1>Explore Events</h1>
           {resultsText}
           {events}
+          <div className='load-button-container'>
+            <button
+              id="load-button"
+              onClick={this.loadMoreEvents}>
+              Load More Events
+            </button>
+          </div>
         </ul>
       </div>
     );
