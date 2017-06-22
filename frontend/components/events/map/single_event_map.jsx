@@ -9,7 +9,6 @@ class SingleEventMap extends React.Component{
   }
 
   componentWillReceiveProps(nextProps) {
-    debugger;
     if(!nextProps.event) return;
     if(this.loaded) return;
     let {title, street_address, city_state_zip} = nextProps.event;
